@@ -1,0 +1,92 @@
+Suppose we want to search a file in our system.
+
+we can use locate command
+
+before that we will update our mlocate database
+
+go to home 
+
+>> cd ~
+
+now go to following path
+
+>> cd /var/lib/mlocate/
+
+now update the mlocate.db
+
+>> sudo updatedb
+
+
+now you can search for the file
+
+
+>> locate <filename.txt>
+
+
+there is also a find command
+
+>> find <path>
+
+e.g.
+
+>> find /home/astrovishal/hola/ -name <filename.txt>
+
+to ignore case we use -iname instead of -name
+
+>> find /home/astrovishal/hola/ -iname <filename.txt>
+
+
+
+searching contents of file using grep command
+
+to search word mango in file
+
+>> grep mango <filename.ext>
+
+
+
+
+if we want exact keyword and not words which contains the words
+e.g. if we have
+apple and pineapple then after searching apple we shouldn't get pineapple which we will normally get
+
+>> grep -w apple <fielname.txt>
+
+To ignore case of searched word
+
+>> grep -i <word> <filename.txt>
+
+
+
+print contents of 2 lines after searching the word
+
+>> grep -A2 <word> <filename.txt>
+
+
+Print two lines before word
+
+>> grep -B2 <word> <filename.txt>
+
+
+
+
+Two lines after and before
+
+>> grep -A2 -B2 <word> <filename.txt>
+
+
+If there are multiple files in a directory, and you need to find a word
+
+>> grep -r <word> /path_to_directory
+
+
+
+if we don't want to see the searched word and only see other content of file
+
+>> grep -v <word> <filename.txt>
+
+
+
+
+
+

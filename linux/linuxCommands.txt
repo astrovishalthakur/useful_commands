@@ -1,0 +1,67 @@
+## check memory
+free -m
+
+## to see main commands
+help
+
+## see about some command "e.g. 'ls' command"
+ls --help
+
+## make folder
+mkdir
+
+## show current path
+pwd
+
+## by default linux is in root which is even behind C drive
+## to reach c or d drive
+## cd .. until you reach root
+cd mnt
+cd c (for c drive, cd d for d drive)
+
+## change directory
+cd "folder_name"
+
+## create a file
+touch filename.txt
+
+## To view content of file
+cat filename.ext
+
+## create a file and enter content
+## > symbol means overwrite, meaning overwrite the contents of file with new contents
+cat > filename.txt
+enter contents
+LCtrl + D.
+
+
+## create and open file in terminal
+vi filename.txt
+
+# an editor will open in terminal
+# to enter contents, press 
+i
+
+# in your keyboard
+# insert will display in bottom
+# start typing whatever you want to insert
+# now to exit editor press
+esc
+
+# now to save
+:w
+hit enter.
+
+# now to close, 
+:q
+
+# to close without saving
+:q!
+
+
+# To save and exit
+:x
+
+# search word in file, use /
+/word
+

@@ -1,0 +1,46 @@
+Go to virtualbox manager and open settings.
+go to network tab.
+select bridge adapter connection
+click advanced, check the cabled connection box
+save and start your ubuntu machine.
+
+if you are doing for first time, you need to install additional packages
+
+>> sudo apt update
+
+>> sudo apt install openssh-server
+
+Now we need to start the service you need to do
+
+>> sudo service ssh start
+
+go to ubuntu terminal
+type 
+
+>> ifconfig
+
+if above command doesn't work do,
+
+>> sudo apt install net-tools
+
+now try again
+
+>> ifconfig
+
+copy the ip4 address.
+
+go to mobaxterm
+
+type
+
+>> ssh astrovishal@<your ip4 address>
+
+now enter password on ubuntu.
+
+above, astrovishal is user-name on host(ubuntu in vm).
+
+stucture of ssh connect command is 
+
+ssh username@ip_address.
+
+now you are connected to ubuntu host (your vm ubuntu) from client(mobaxterm). You can access host from client using terminal. Like create some folders, etc.

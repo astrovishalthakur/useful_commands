@@ -1,0 +1,34 @@
+To change the ownership of a file we can use the command 
+'chown'
+
+Examples:-
+
+-chown owner filename
+-chown owner:group filename
+
+changing the group for a file
+- chgrp group filename
+
+
+Changing owner of the file
+
+To see user of file, do
+
+>> ls -l
+
+To change user, do
+
+>> sudo chown <new owner/user-name> <file-name>
+
+TO change user as well as group
+
+>> sudo chown <new_user>:<new-group> <filename>
+
+e.g.
+
+>> sudo chown dummyvishal:dummygroup deserts.txt
+
+
+To change group only
+
+>> sudo chgrp <group-name> <filename>

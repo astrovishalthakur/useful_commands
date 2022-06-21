@@ -1,0 +1,5 @@
+go to sql commandline
+
+SET @@sql_mode='';
+
+since there is nothing in single quotes(which usually have mode variable), sql will be in default mode.

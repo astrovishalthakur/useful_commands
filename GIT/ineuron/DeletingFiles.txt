@@ -1,0 +1,24 @@
+To see difference between previously commited file and new version of same file. we can do
+
+>> git diff
+
+
+If we want to only compare file in staged area, we can do
+
+>> git diff --staged 
+
+now to Delete commited files
+
+you should never delete them directly.
+
+>> rm <filename>
+
+It will confuse git which was tracking the files but now they seems to be found nowhere.
+
+To delete files so that even git knows.
+
+we will do
+
+>> git rm <filename>
+
+This will delete file and git will know it as well

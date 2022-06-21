@@ -1,0 +1,11 @@
+to name an image with tag, use -t command with build.
+
+e.g. we want to build a dockerfile with name vishalimg and tag as latest, then command is 
+
+# first navigate to dockerfile dir
+
+>> docker build -t vishalimg:latest .
+
+# now you can run the image with name vishalimg as
+
+>> docker run vishalimg

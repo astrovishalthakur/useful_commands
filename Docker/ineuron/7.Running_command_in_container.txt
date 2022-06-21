@@ -1,0 +1,21 @@
+We can run command in container like this
+
+Make sure container is running.
+
+
+If it is stopped, just do
+
+>> docker start <name or id of container>
+
+now to give commands, we can use docker exec
+
+>> docker exec <name or ID> <command>
+
+Suppose we have ubuntu container running
+
+say container name is just_jelly
+
+We want to run command cat /etc/hosts in it, we can do
+ 
+>> docker exec just_jelly cat /etc/hosts
+

@@ -1,0 +1,27 @@
+TO install rasa, we need to create conda environment first.
+
+>> conda create --name <env-name>
+
+This will create a conda env in 
+
+path: C/Users/Vishal Thakur/anaconda3/env/<env-name>
+
+now activate conda 
+
+conda activate <env-name>
+
+now we can install rasa using 
+
+>> pip install rasa
+
+but above method will take a long time.
+
+rasa has an dependency called tensorflow which is very large..
+
+So we will install tensorflow seperately using conda
+
+>> conda install ujson
+>> conda intall tensorflow
+>> pip intall rasa
+
+above method will take less time

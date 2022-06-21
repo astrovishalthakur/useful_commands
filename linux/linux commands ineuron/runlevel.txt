@@ -1,0 +1,56 @@
+TO see runlevel type
+>> runlevel
+
+N 5 means we are at gui or graphical level.
+
+
+To see name of run level
+>> systemctl get-default
+
+
+switch to run level3 i.e. pure command line
+
+>> sudo vi /etc/default/grub
+
+now a file will open 
+go down
+field saying command line linux will be empty ""
+fill 3 in there,
+
+save the file using
+>> wq
+
+
+now update grub
+
+>> sudo update-grub
+
+
+and reboot the system
+
+>> sudo reboot now
+
+
+Now ubuntu will open without any gui and in pure command line interface,
+in servers we only get n3 level that is command line.
+
+now login with your id and password,
+
+check again for runlevel.
+
+>> runlevel
+
+>> systemctl get-default
+
+To again get gui
+
+do all things same
+
+>> sudo vi /etc/default/grub
+
+
+now remove 3 from field grub command line linux
+
+save file and update grub
+
+reeboot again.

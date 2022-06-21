@@ -1,0 +1,7 @@
+using logical operators
+
+SELECT email, name FROM students
+WHERE amount > 10000 AND course_count <= 9;
+
+SELECT email, name FROM students
+WHERE amount > 10000 OR course_count <= 9;

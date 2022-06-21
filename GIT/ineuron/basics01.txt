@@ -1,0 +1,29 @@
+to see log messages of you git
+
+>> git log
+
+above command shows unique commit id or sha1 key of the commit.
+
+Now git log shows all commits, to see specific number of latest logs
+
+>> git log -n 4
+
+above command will show us latest 4 commits in the file.
+
+To see commits made by particular author
+
+>> git log --author="author-name"
+e.g.
+>> git log --author="astrovishalthakur"
+
+To see changes in file after it is just modified
+
+>> git status
+
+To see logs since a particular date
+
+>> git log --since=2022-02-11
+
+to see log until a date
+
+>> git log --until=2022-03-22

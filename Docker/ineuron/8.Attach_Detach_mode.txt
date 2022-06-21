@@ -1,0 +1,38 @@
+When we start a container, it shows processes starting in terminal.
+
+Now we can't do anything in terminal until docker container is running.
+
+We need to start new terminal to write other commands or we have to stop the container.
+
+We can test it by typing
+
+>> docker run nginx
+
+We will see docker container of nginx has been started, but now we can't write anything else until that container is running.
+
+This happens because state of container is attached to terminal
+
+hence the attach mode of container.
+
+
+This is default mode.
+
+To start container in deattached mode such that container keeps running in background but terminal is free for other commands, we can use deattached mode.
+
+This is done by supplying -d flag.
+
+
+>> docker run -d nginx
+
+Now you will see that nginx container has been started but terminal is free.
+
+See by doing 
+
+>> docker ps 
+
+We can also attach a deattached container to the terminal
+
+Do the following command
+
+>> docker attach <name or id>
+

@@ -1,0 +1,75 @@
+GIT CHECKOUT
+
+Updates files in the working tree to match the version in the index or the specified tree. If no pathspec was given, git checkout will also update HEAD to set the specified branch as the current branch.
+
+
+Suppose we made a project.
+
+did initial commit(commit 1)
+
+
+commit 2
+
+
+commit 3 
+
+
+commit 4
+
+
+commit 5
+
+
+now you notice that your project is messed up
+
+It was working fine until commit 3, after that you made some changes and did two commits i.e. commit 4 and commit 5 and now its messed up.
+
+
+To go to that stable version i.e. after commit 3, we can do so using following commands.
+
+
+
+do a git log
+
+>> git log
+
+now you will see all commits with their hashes, 
+copy 4-5 letters hash of commit3
+
+now do 
+
+>> git checkout <copied hash> -- <filename>
+
+
+###########################################
+GIT CHECKOUT GOES TO SPECIFIED HASH, IF NOT SPECIFIED THEN PREVIOUS HASH AND PULLS VERSION OF FILE AT THAT COMMIT AND UPDATES FILE IN WORKING AREA TO THE SAME NEWLY PULLED VERSION
+#############################################
+
+
+
+
+now you will see changes are made in working directory and these changes are staged as well.
+
+To see differences that will be made, do
+
+>> git diff --staged
+
+To give final confirmation that we have reviewed the changes and want to go ahead with them.
+
+We will reset position of head to current version
+
+>> git reset HEAD <filename>
+
+
+GIT CHECKOUT is also used for restoring files as they were before modifying but not yet added and commited.
+
+To make your file same as it was in last commit
+
+>> git checkout -- <filename>
+
+this is same as doing
+
+>> git restore <file_name>
+
+
+

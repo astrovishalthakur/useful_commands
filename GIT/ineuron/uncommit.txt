@@ -1,0 +1,28 @@
+we can't actually uncommit things, since every commit generates a hash and that hash is used in generating hash for next commit as well.
+
+So every commit has after commits dependent on it.
+
+But since last or most recent commit doesn't have next commits who are dependent on it, we can edit that last commit.
+
+
+Although editing commit is not generally used, it's most common use is when we want to make a very small change in file which is not worth making new commit.
+
+In this case, we can just edit the last commit.
+
+To do that,
+
+first just modify your file
+
+now stage it
+
+>> git add <file name>
+
+now instead of commiting it directly, we will append it with help of --append flag
+
+to do that, do
+
+>> git commit --amend -m "message"
+
+above command will not create new commit but edit the previous commit with this new message.
+
+So basically this command can also be used to change commit message.

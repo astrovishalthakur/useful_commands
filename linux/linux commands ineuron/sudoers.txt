@@ -1,0 +1,29 @@
+The sudoers file is a file linux and unix administrators use to allocate system rights to system users.
+
+To see contents of sudoers file
+
+>> sudo cat /etc/sudoers
+
+We open this file using vi editor
+
+>> sudo visudo /etc/sudoers
+
+Then we see a field where root user has been mentioned with all permissions given
+We can add our own user here by manually typing his name and giving all permissions similarly.
+
+Then saving and closing the file.
+
+
+There's a much cleaner and simpler way of doing this
+
+if we do
+
+>> id astrovishalthakur(root)
+
+we will see that this user(Root) has been assigned to sudo group
+
+So we can just add our user to this sudo group
+
+using command
+
+>> sudo usermod -a -G sudo <user-name>

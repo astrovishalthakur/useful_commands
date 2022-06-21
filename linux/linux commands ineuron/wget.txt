@@ -1,0 +1,27 @@
+This is used to download files from internet
+
+>> wget <url>
+
+Curl is also used to download stuff
+
+curl shows output on console
+
+>> curl <link>
+
+We can give name of our choice to files downloaded
+
+we need to use -O flag
+
+>> wget -O NameOfOurChoice.extension <url>
+
+now to download file to our choice directory
+
+>> wget -O filename.ext -P /path <url>
+
+curl command name choice
+
+>> curl -o filename.txt <url>
+
+curl only shows content on console, to download and save data to a file we use
+
+>> curl -o filename.ext <urlpath>

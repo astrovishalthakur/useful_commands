@@ -1,0 +1,13 @@
+diff command shows diff between two files
+
+>> diff file1.txt diff file2.txt
+
+2c2 means 
+point in 2nd line of first file
+and 
+point in 2nd line of second file are different.
+
+cmp command does similar task
+tells first instance where there is difference.
+
+>> cmp file1.txt file2.txt

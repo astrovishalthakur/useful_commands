@@ -1,0 +1,81 @@
+# we create a Dockerfile
+# for better understanding.
+# go to desktop/useful/mymongo/dockerfil 
+# we go to terminal
+# navigate to folder having Dockerfile
+@@@@@@@@@@@@@@@@
+>> docker build .
+@@@@@@@@@@@@@@@@
+
+# dockerfile will have commands
+# e.g. FROM alpine
+       apk add binutils
+
+# dockerfile will pass its contents to docker client
+# docker client try to run this file and create a custom image.
+# at first custom image is empty.
+# then it will install copy of os in this custom image(alpine in our case)
+# now we have asked it to install a program called binutils
+# it will create a temporary container from files in custom image
+# Now it will install required program in that temporary container.(binutils in our case)
+# if everything goes smoothly in temporary container, docker will replace contents of custom image with contents of temporary container.(i.e. apine and binutils)
+# now custom image have working alpine and binutils, docker will remove(and cache it) temporary container. 
+
+# now suppose you update your docker file and try to install other software (say chrome)
+# all steps will be same as above, a temporary container will be created, files from custom image will be copied to it.
+# new application(chrome) will be installed in temporary container.
+# contents of custom image(os and binutils) will be replaced by contents of temporary container(os + binutils + chrome). Temprory cont. will be removed.
+
+####################################################################
+####################################################################
+# if you want to give a name to your docker build(image), you can use -t, like
+(name:tag)(say we want to give name as myimage1 and tag as 1.0, then command is)
+
+normally => 
+@@@@@@@@@@@@@@@@
+>> docker build .
+@@@@@@@@@@@@@@@@
+
+with custom name=>
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+>> docker build -t myimage1:1.0 .
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+# after building image, run
+
+@@@@@@@@@@@@@@@@@
+>> docker images
+@@@@@@@@@@@@@@@@@
+
+
+# you will see images, copy image id and run
+>> docker run imageid.
+
+
+# now our docker container will start.
+# we have started mongod service in our container on 27017 port.
+# to see port id, we can do
+
+@@@@@@@@@@
+docker ps
+@@@@@@@@@@
+
+# copy port id(something like eafd8fa3809a )
+
+# now if we try to run bash in container on following port
+
+>> docker exec -it eafd8fa3809a bash
+
+# this will give error since there is no bash preinstalled.
+# althouth we do have a terminal called shell.
+# so we will do , here sh is shell
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+>> docker exec -it eafd8fa3809a  sh
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+# we will see something like this
+
+/data #
+
+# notice we have landed on /data, which was our working directory(specified in Dockerfile).

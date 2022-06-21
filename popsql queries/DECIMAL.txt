@@ -1,0 +1,13 @@
+we can enter decimal values like
+
+below statement will create a DECIMAL variable called amount which can Total of 5 digits including after decimal and it store 2 values after decimal.
+
+>> amount DECIMAL(5, 2);
+
+WE have FLOAT as well which works in same way
+
+>> amount FLOAT;
+
+but FLOAT can change values after some point of values(rounding up the number on its own)
+
+but DECIMAL keeps the exact value, so it is reccommended to use.

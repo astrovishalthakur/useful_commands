@@ -1,0 +1,74 @@
+or you can use following link
+https://www.analyticsvidhya.com/blog/2021/06/how-to-load-kaggle-datasets-directly-into-google-colab/
+
+
+api credentials:
+{"username":"astrovishalthakur","key":"a1e1914745eda3ebcb780922e19e3010"}
+
+1. Install the Kaggle library
+! pip install kaggle
+
+2. Make a directory named “.kaggle”
+! mkdir ~/.kaggle
+
+3. Copy the “kaggle.json” into this new directory
+! cp kaggle.json ~/.kaggle/
+
+4. Allocate the required permission for this file.
+! chmod 600 ~/.kaggle/kaggle.json
+
+Step 4: Download datasets
+Kaggle host two types of datasets:
+ Competitions and Datasets. 
+The procedure to download any type remains 
+the same with just minor changes.
+
+
+
+##Downloading Competitions dataset:
+
+! kaggle competitions download <name-of-competition>
+
+
+##Downloading Datasets:
+
+##These datasets are not part of any competition. You can download these datasets by:
+
+! kaggle datasets download <name-of-dataset>
+
+##In case you get a dataset with a zip extension,
+##you can simply use the unzip command of Linux to extract the data:
+
+! unzip <name-of-file>
+
+
+##Tip 1: Download Specific Files
+##You just saw how to download datasets from Kaggle in Google Colab.
+## It is possible that you are only concerned about a specific file and want to download
+##only that file. 
+##Then you can use the “-f” flag followed by name of the file. 
+##This will download only that specific file. 
+##The “-f” flag works for both competitions and datasets command.
+
+Example:
+
+! kaggle competitions download google-smartphone-decimeter-challenge -f baseline_locations_train.csv
+
+
+
+##Simply upload the “kaggle.json” to your Google Drive. 
+##For simplicity, upload it in the root folder rather than any folder structure.
+
+2. Next, mount the drive to your notebook:
+
+
+3. The initial command for installing the Kaggle library
+ and creating a directory named “.kaggle” remains the same:
+
+! pip install kaggle
+! mkdir ~/.kaggle
+
+
+!cp /content/drive/MyDrive/kaggle.json ~/.kaggle/kaggle.json
+
+

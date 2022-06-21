@@ -1,0 +1,23 @@
+suppose you are no branch1
+
+you did some modifications there
+
+you didn't add or commit changes
+
+now you tried to go back to main branch.
+
+It will not allow you to do so and will say that all your chages will be deleted, so you better commit these changes before checking out to main.
+
+
+Now there might be the case that you work on branch1 is still incomplete and you don't want to commit it yet.
+
+In these case, you can stash your changes.
+
+Stashing helps you to store your changes temporarily so that you can come back to branch1 and work on them again.
+
+
+To stash things
+
+>> git stash save "<message to stash>"
+
+Now if we do git status, we will see working directory is clean.

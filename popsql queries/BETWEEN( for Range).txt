@@ -1,0 +1,9 @@
+Used to give range
+
+SELECT name FROM employee
+WHERE amount BETWEEN 5000 AND 10000;
+
+Traditional way would be
+
+SELECT name FROM employee
+WHERE amount >= 5000 AND amount <= 10000;

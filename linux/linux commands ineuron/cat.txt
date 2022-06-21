@@ -1,0 +1,51 @@
+Used to print contents of file, create new files, copy content of one file to another.
+
+>> cat <file_name.txt>
+
+
+to create file
+
+>> cat > <file_name.txt>
+
+
+To append to file
+
+>> cat >> <file_name.txt>
+
+
+
+Copy files
+
+>> cat <file1.txt> <file2.txt>
+
+
+
+Top 10 lines of file
+
+>> cat <file_name.txt> | head
+
+
+
+See top 3 lines
+
+>> cat <file_name.txt> -n 3
+
+
+
+Other commands are also present. Google it.
+
+
+
+To see end of lines
+
+>> cat -e <file_name.txt>
+
+
+
+Tab seperated file
+
+>> cat -T <fielname.txt>
+
+
+
+tab space is replaced by ^. saves screen space.

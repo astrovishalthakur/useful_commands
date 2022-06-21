@@ -1,0 +1,30 @@
+suppose you did a commit
+
+
+now you did some modification and saved.
+previous version is lost, since you have saved the file.
+
+
+now you added it to staged area
+
+How to get previous version(i.e. version just after latest commit)
+
+
+To unstage it, we do
+
+>> git restore --staged <filename>
+another command is 
+>> git reset HEAD <file>
+
+Now file is unstaged, but it is still modified after saving previously.
+
+
+To undo changes and revert to version that was after previous commit, we do 
+
+
+>> git restore <file name>
+
+
+another way to make your file same as it was in last commit
+
+>> git checkout -- <filename>

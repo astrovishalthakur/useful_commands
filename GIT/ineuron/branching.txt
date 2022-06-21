@@ -1,0 +1,87 @@
+To see what branches are there
+>> git branch
+
+Current branch will be the one with astrics
+e.g. * main
+
+Create new branch
+
+>> git branch <branch_name>
+
+Switch to a different branch
+
+>> git checkout <branch-name>
+
+
+now suppose we made some modification in this newly created branch.
+
+we will commit it
+
+To add and commit in one line, we can do
+
+>> git commit -am "message"
+
+-am means add all and message flag.
+
+now you will see that modifications you did are present in file.
+
+>> git log --oneline
+
+above command will show you your latest commit in this different branch.
+
+now switch back to main branch
+
+>> git checkout main
+
+Now you are again in main branch
+the commit you made previously in different branch will not be shown here.
+do
+
+>> git log --oneline
+
+you will see that commit missing.
+
+now open the file where you made changes,
+
+you will see your modifications you did are not here, since you did them in different branch.
+
+This swithching of branches is called context switching.
+
+
+To create a branch and switch to it in one line
+
+>> git checkout -b <branch-name>
+
+To delete a branch
+
+>> git branch -d <branchName>
+
+
+Sometimes you are boss and needs to
+To see log of every commit
+
+>> git log --graph --oneline --decorate --all
+
+if you ommit --all, you will see logs only of current branch.
+
+
+
+To see differences in two branches
+
+>> git diff <branch1>..<branch2>
+
+
+Now suppose you are on <branch1> and made some changes in that.
+
+now if you directly checkout to <branch2>, it will create complicacy and will throw error.
+
+Now there are 3 ways to get out of this situation.
+
+1. Remove all the changes of <branch1>, i.e. make working tree clean again.
+(this is not good idea, since we will loose all our progress.)
+
+2. commit the changes in <branch1>, this depends on you. Sometimes you don't want to work as your project is not completed yet.
+
+3. third way is something called stashing. It saves your work and let's you switch branches even if you had not commited the changes.
+
+Stash is kind of your reserved area where you can put your work and then work on them later.

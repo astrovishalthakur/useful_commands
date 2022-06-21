@@ -1,0 +1,80 @@
+Special Permissions:
+
+to change permissions, we used chmod
+
+e.g. chmod 777  --->  (usere, group, others)
+
+now these were standard permissions.
+
+Special Permission provides special privileges.
+
+
+Format---> X777---->   specialformat, user, group, others
+
+
+Special permissions
+
+1. SUID s (4)
+2. SGID s (2)
+3. Stickybits t (1)
+
+SUID--> Setup userid:  A file with suid always executes as the user who owns the file, regardless the user passing the command.
+
+SGID--> setup groupid:  If set on a file, it allows the file to be executed as the group that owns.
+
+Sticky Bits--> This permission does not affect individual files. However at the directory level, it restricts file deletion. Only the owner(and root) of a file can remove the file within that directory.
+
+
+If we set these permissions on directory then every file created in that directory will have same special permissions set.
+
+
+
+
+
+>> chmod 4777 <filename>
+
+above command give read-write-execute permission to user, group and others(-777)
+
+plus
+
+it will give setup userid permission as well(4---)
+
+
+Similarly if you want to give special group permission, 
+
+>> chmod 2777 <filename>
+
+
+To set sticky bit permission
+
+>> chmod 1777 <directory>
+
+
+To remove stickybit
+
+>> chmod -t <directory>
+
+
+Now Symbolic mode
+
+>> chmod +t <filename>
+
+To remove
+
+>> chmod -t <filename>
+
+To add special user id
+
+>> chmod u+s <filename>
+
+To remove
+
+>> chmod u-s <filename>
+
+To add special group id
+
+>> chmod g+s <filename>
+
+To remove
+
+>> chmod g-s <filename>

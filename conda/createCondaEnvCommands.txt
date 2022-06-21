@@ -1,0 +1,47 @@
+creating conda env
+
+>> conda create --name <env-name>
+
+e.g.
+
+>> conda create --name myFirstEnv
+
+now this env will be stored where you anaconda resides, 
+
+that is /c/Users/Anaconda3/envs
+
+but this will fill our c drive, 
+
+to store env in particular directory, we use --prefix flag
+
+>> conda create --prefix <env-name>
+
+e.g.
+
+creating env with python 3.7 would look like
+
+>> conda create --prefix ./env python=3.7 -y
+
+-y flag is to give yes to all permissions.
+
+
+
+To list all envs
+
+>> conda env list
+
+
+To activate env
+
+>> conda activate <env-name>
+
+
+to deactivate
+
+>> conda deactivate
+
+there's a environment called base, which is always active and helps running conda commands in terminal.
+
+if you deactivate it, conda commands won't run,
+
+simply close and reopen the terminal.

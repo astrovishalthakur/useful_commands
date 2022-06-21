@@ -1,0 +1,27 @@
+# just go to mysql commandline client
+# put password. yes!!! the gmail one
+# mysql shell will power up.
+
+# granting all privileges to the root user
+GRANT ALL PRIVILEGES on * . * TO  'root'@'localhost';
+
+# creating database
+create database database_name;
+
+# username = astrovishalthakur, password = as always.
+
+# to update password
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'new_password';
+
+# to enter mysql in cmd
+mysql -u -root -p
+then enter password
+
+#create a database
+create database database_name
+
+# show all databases
+show databases;
+
+# to use a database
+use database_name

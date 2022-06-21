@@ -1,0 +1,20 @@
+Now let's see how to go to ubuntu bash shell in docker container
+
+Type command
+
+>> docker run -it ubuntu bash
+
+This will start a ubuntu container and take us to its shell
+
+We can run all basic commands here, this ubuntu image is very ligh-weight version of ubuntu.
+
+If we already have a container running, we can write
+
+>> docker exec -it <name of ID> bash
+
+To exit we can just write
+
+>> exit
+
+This will log us out of the ubuntu bash and also stop the container.
+

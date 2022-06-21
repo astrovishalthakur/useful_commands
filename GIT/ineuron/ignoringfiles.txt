@@ -1,0 +1,57 @@
+How to ignore files
+
+Sometimes we don't want git to track some files.
+
+Method 1:
+
+You have some files, which are not tracked by git (not staged but modified).
+And some files which are being tracked(staged)
+
+now to see what files will be cleaned
+
+>> git clean -n
+
+And to clean all these files,
+
+>> git clean -f
+
+Cleaning means deleting or removing untracked file.
+Above command will delete untracked files from local directory.
+
+
+Second method is .gitignore file
+
+We can just put all files which we don't want git to track.
+
+also 
+
+.gitignore also needs to be added to git repo
+
+just do 
+
+>> git add .gitignore
+
+>> git commit -m "gitignore file added"
+
+
+Now we can add things in .gitignore
+
+like
+
+# hash us used for comments in .gitignore
+
+*.mp4 
+*.js
+# above line will ignore all files with extension .mp4 and javascript files
+
+assets/videos/
+
+# above line will ignore videos folder in assets folder.
+
+
+Now suppose you have a file with .js extension you want being tracked, but since you have asked .gitignore to ignore all .js files, we need to specify it explicitly to not ignore <importantfiel.js>
+
+
+we will add in .gitignore
+
+!importantfile.js

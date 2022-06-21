@@ -1,0 +1,19 @@
+Rasa X is a tool build upon rasa open source.
+
+Currently there is version 1.1 of rasaX
+
+we will see how to install rasa X version 0.46
+
+All steps are same as installing rasa 
+
+--create conda env with python 3.7 or 3.8
+
+--activate conda env
+
+--conda install ujson and tensorflow
+
+-- install rasa X using 
+
+>> pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple
+
+

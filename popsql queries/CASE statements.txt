@@ -1,0 +1,9 @@
+works like switch case
+
+SELECT name, amount, 
+	CASE
+		WHEN amount BETWEEN 7 AND 10 THEN "Early Bird"
+		WHEN amount BETWEEN 11 AND 12 THEN "Regular User"
+		ELSE "##"
+	END AS Custom
+FROM students;

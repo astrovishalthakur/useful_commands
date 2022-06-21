@@ -1,0 +1,23 @@
+Docker and VM
+
+Docker is supposed to run processes, it uses host os for working and provides necessary apps via images.
+
+VM is used to run whole os it them, hence they behave like whole computer with an operating system.
+
+Docker container will exit if process running in it crashes.
+
+VM will now stop completely even if application crashes in it.
+
+To see the example:
+
+We will run Ubuntu in Docker and pass command to sleep for 5 seconds.
+
+A new container from ubuntu image will be started, command to sleep for 5 seconds will run and then it will automatically exit.
+
+We can see stopped container docker ps -a command.
+
+>> Docker run ubuntu sleep 5
+
+>> Docker ps -a
+
+We will see an ubuntu container was started and now it's stopped.

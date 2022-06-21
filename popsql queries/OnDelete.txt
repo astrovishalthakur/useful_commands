@@ -1,0 +1,18 @@
+--deleting entries in table when they have foreign keys associated with them
+-- now we can do two things in this case
+-- suppose employee 102 is manager of a branch and have mgr_id as foreign key linking to emp_id of employee table.
+-- 1. we can set on delete null   means set value of mgr_id  = null in branch table
+-- 2. we can do on delete cascade.  means delete the entire row in branch table where mgr_id is 102
+
+DELETE FROM employee
+WHERE emp_id = 102;
+
+SELECT * FROM branch;
+
+SELECT * FROM employee;
+
+
+DELETE FROM branch WHERE branch_id = 2;
+
+SELECT * FROM branch_supplier;
+

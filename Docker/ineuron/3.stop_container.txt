@@ -1,0 +1,22 @@
+A container can have two references, 
+1. its name given by docker, e.g. lucid_hypatia, etc.
+2. its id number which are also mentioned in docker desktop
+
+we can stop or start docker container with any refrences, e.g.
+
+>> docker start lucid_hypatia
+
+or 
+
+
+>> docker stop 4ai33h3oj3l3oh3o33oh3oo33ho4ho4h3o3o
+
+an id which looks like above number.
+
+same with stopping a container.
+
+>> docker stop lucid_hypatia
+
+or
+
+>> docker stop <id>

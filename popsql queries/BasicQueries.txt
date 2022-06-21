@@ -1,0 +1,63 @@
+--Find all employees
+SELECT * FROM employee;
+
+-- Find all clients
+SELECT * FROM client;
+
+--Find all employees ordered by salary
+SELECT * FROM employee
+ORDER BY salary DESC;
+
+-- Find all employees ordered by sex then name
+SELECT * FROM employee
+ORDER BY sex, first_name, last_name;
+
+--Find first 5 employee in the table
+SELECT *
+FROM employee
+LIMIT 5;
+
+--Find the first and last names of all employees
+SELECT first_name, last_name
+FROM employee;
+
+--Find forename and sirname of all employees
+SELECT first_name AS Forename, last_name AS Surname
+FROM employee;
+
+--Find all the different genders
+SELECT DISTINCT sex
+FROM employee;
+
+SELECT DISTINCT branch_id
+FROM employee;
+
+--Give full names of employee as concatenated first and last names.
+
+SELECT CONCAT(first_name, " ", last_name) AS fullname FROM employee;
+
+
+--While getting all firstname, change a to @
+SELECT REPLACE(first_name, 'a', '@') FROM employee;
+
+--Get list of name, if name is longer than 7, truncate with ...
+
+SUBSTRING(string, start, end)
+SELECT CONCAT(SUBSTRING(first_name, 1, 7), "...");
+
+--Get length of all names
+SELECT first_name, CHAR_LENGTH(first_name) AS LENGTH FROM employee;
+
+
+--Get all firstname in uppercase and secondname in lowercase
+
+SELECT UPPER(first_name), LOWER(second_name) FROM employee;
+
+--Get unique names
+SELECT DISTINCT first_names FROM employee;
+
+--Limit your output to 3
+SELECT first_name FROM employee LIMIT 3;
+
+--Use limit but with start and end specified i.e. employee 2 to 5. 
+SELECT first_name FROM employee LIMIT 2, 5;

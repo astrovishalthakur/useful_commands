@@ -1,0 +1,56 @@
+SCP or secure copy is a command line utility that allow you to secure copy files and directories between two locations.
+
+
+With scp you can copy a file or directory
+
+- From your local system to a remote system
+- From a remote system to your local system
+- Between two remote systems from you local system
+
+Connect your ubuntu local machine to remote machine.
+
+Talked in file:----->  sshconnect
+
+now how to copy file from host system and paste to remote system
+
+First get ip address of remote system(ubuntu in our case)  using 
+
+>> ifconfig
+
+Now go to directory where file is in local system(wsl in our case)
+
+now to copy file from wsl to ubuntu de
+
+>> scp <filename.txt> <hostusername>@<host ip address>:/path where you need to paste file
+
+e.g.
+
+>> scp hello.txt astrovishalthakur@192.168.1.3:/home/astrovishalthakur/Desktop/ 
+
+
+above command will send file with same name as in host, 
+
+to paste file in remote with new name just add that new name after path.
+
+e.g.
+
+>> scp <filename.txt> <hostusername>@<host ip address>:/path where you need to paste file/<new-filename.txt>
+
+>> scp hello.txt astrovishalthakur@192.168.1.3:/home/astrovishalthakur/Desktop/new-name.txt
+
+
+To copy paste folder from local to remote
+
+>> scp -r <folder-name> <host-username>@<host ip address>:/path
+
+
+
+Now to copy from host and paste to local
+
+>> scp <hostname>@<host-ip>:/path-of-file <path in local where you want to paste>(. for current directory)
+
+e.g.
+
+>> scp astrovishalthakur@192.168.1.3:/home/astrovishalthakur/Desktop/new-name.txt .
+
+We can also do from remote 1 to remote 2 if both of them are connected with our local.

@@ -1,0 +1,26 @@
+--Find names of all employees who have
+--sold over 30000 to a single client
+
+SELECT employee.first_name, employee.last_name
+FROM employee
+WHERE employee.emp_id IN
+    (
+    SELECT emp_id FROM works_with
+    WHERE total_sales > 30000
+);
+
+--Find all clients who are handled by the branch 
+--that Michael Scott manages
+--Assume know Michael's id
+
+SELECT client_name
+FROM client
+WHERE branch_id = (
+    SELECT branch_id
+    FROM branch
+    WHERE mgr_id = 102
+    LIMIT 1 -- limit 1 is used to make sure it returns only single
+    -- value in case michael scott is manager of many branches
+);
+
+

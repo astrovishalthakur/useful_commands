@@ -1,0 +1,22 @@
+after all basic setup, we can create an admin so that we can use admin page.
+
+>> python manage.py makemigrations
+
+output will be : no changes detected.
+
+(If we had created our own databases or made some changes in default database, we would have seen those changes inplace of above output.)
+
+makemigration detect the changes and make django update the database.
+
+
+so we will migrate.
+
+>> python manage.py migrate
+
+now creating admin
+
+>> python manage.py createsuperuser
+
+enter details.
+
+Now you can acess admin page.

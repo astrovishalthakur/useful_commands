@@ -1,0 +1,28 @@
+RESET means we will loose data.
+
+
+Different kinds of reset
+
+- soft safe
+- mixed default
+- hard caution
+
+soft - just points towards another SHA
+
+mixed - points towards another SHA and makes your staging area a copy of repo(this is default)
+
+hard - points toward another SHA, makes your staging area a copy of repo and makes your local files exactly same as repo.
+
+
+>> git reset --soft/hard/mixed <hash> filename
+
+
+
+Shortcuts
+
+To make head points towards previous commit
+>> git reset HEAD~1
+
+To make head points towards 4 commits early
+>> git reset HEAD~4
+

@@ -1,0 +1,4 @@
+set environment variables
+>> set
+create requirements file
+>> pip freeze requirements.txt

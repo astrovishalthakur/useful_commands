@@ -1,0 +1,23 @@
+To archive files into .tar folder
+
+suppose we have file1.txt, file2.txt.  To archive them
+
+>> tar -cf zippedfile.tar file1.txt file2.txt
+
+To see verbose information
+
+>> tar -cvf zipped.tar file1.txt file2.txt
+
+To extract contents of archived file
+
+>> tar -xvf zippedfile.tar
+
+Archive whole folder.. we have a folder called fol
+
+>> tar -cvf zippedfolder.tar fol/
+
+now whole folder has been zipped as zippedfolder.tar
+
+we don't want to extract just view the contents.
+
+>> tar -tf zippedfolder.tar

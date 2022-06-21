@@ -1,0 +1,19 @@
+some differences
+
+>> docker start - it starts the already present container which has been stopped.
+
+>> docker stop - it stops the running container.
+
+>> docker run - it creates a new container from the image specified.
+
+>> docker rm - used to delte containers
+
+>> docker rmi - used to delete images
+
+
+>> docker images - used to see all images present locally.
+
+>> docker ps - lists all running containes
+
+>> docker ps -a : used to list all containers, running and stopped.
+

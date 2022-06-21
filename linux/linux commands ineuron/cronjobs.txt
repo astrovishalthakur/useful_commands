@@ -1,0 +1,14 @@
+Cronjobs are tasks defined to run at given intervals.
+Cron jobs are usually used in order to log certain events schedule backup, etc. Operations on you host.
+
+Cron is system daemon that is responsible for detecting cron jobs and executing them at given intervals
+
+Structure of cron jobs:
+
+>> minute hour dayofMonth monthofWeek dayofWeek Command
+
+Suppose you want a automatics script for 19th feb 08:10pm
+
+>> 10 23 19 2 * command date >> <file.txt>
+
+Read more on internet.

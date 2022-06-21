@@ -1,0 +1,98 @@
+Tools in systemd
+
+systemctl
+
+- managing system state
+- start, stop, restart and reload
+- enable and disable
+
+Journalctl
+
+- Toubleshooting services
+
+Managing system state
+
+--Done in runlevel lecture
+open file runlevel in "linux commands ineuron"
+
+starting, stoppin, restarting service
+
+we use words like
+
+start
+
+>> sudo service <service-name> start
+
+e.g.
+
+>> sudo service flaskapp.service start
+
+
+(do same for other actions as well)
+stop
+restart
+reload
+
+other format is 
+
+>> sudo systemctl start <Servicename>
+e.g.
+
+>> sudo systemctl start flaskapp.service
+
+Enabling and disabling service
+
+enable
+disable
+
+
+FORMATS
+
+>> sudo service <service-name> <action>
+or
+
+>> sudo systemctl <action> <service-name>
+<action> can be start, stop, enable, etc.
+
+If we are doing any changes in service, it's better to reload the daemon
+
+>> systemctl daemon-reload
+
+
+To edit service file
+
+>> sudo systemctl edit <serviceFileName> --full
+
+you can see system files in following path
+
+/etc/systemd/system/
+
+To list all files
+
+>> /etc/systemd/system/
+
+
+
+
+Journalctl is a command used to manage logs
+
+>> journalctl
+
+To see journal with specific boot
+
+>> journalctl -b <Boot_id>
+
+if boot id is omiited, it show logs after latest boot
+
+
+To see logs related to specific service
+
+>> journalctl -u <servicename>
+
+e.g.
+
+in our flask app e.g.
+
+we created a file flaskapp.service
+
+>> journalctl -u flaskapp.service

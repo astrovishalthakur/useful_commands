@@ -1,0 +1,48 @@
+find pattern in file
+
+file is abc.text
+
+we want to find word apple in abc.txt
+
+>> grep apple abc.text
+
+above command will show line in which apple appears
+
+to see line number where word appear use -n flag
+
+>> grep -n apple abc.txt
+
+to only see the word and not other words associated with it. 
+
+e.g. in pineapple, you don't want to see pine but only apple
+
+>> grep -wn apple abc.txt
+
+ignore case
+
+>> grep -i apple abc.txt
+
+
+next 3 lines after pattern is found
+
+>> grep -A3 apple abc.txt
+
+pevious 3 lines 
+
+>> grep -B3 apple abc.txt
+
+3 lines next and 3 lines previous
+
+>> grep -A3 -B3 apple abc.txt
+
+
+You don't know the file in which pattern lies
+
+>> grep -r apple .
+
+it will search in all files
+
+to number the lines in result
+
+>> grep -nr apple .
+

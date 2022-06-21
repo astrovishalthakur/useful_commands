@@ -1,0 +1,263 @@
+called visual editor
+
+if file is not present it will be created, if present we can edit it
+
+>> vi <file_name.txt>
+
+now to enter insert mode press i
+
+>> i
+
+now type contents of file
+
+to come out of insert mode, press esc.
+
+
+>> esc
+
+now to save file we press "w" to quit vi editor we press "q".
+
+>> :wq
+
+
+To do save and exit without confirmation(ignoring warnings), we can use exclamation mark
+
+>> :wq!
+
+
+There are 3 modes in vi
+1. command line mode
+2. insert mode
+3. last line mode.
+
+
+command mode ---- i ---> insert mode.
+
+insert mode ----- ESC --> command mode.
+
+
+
+command mode ----- : ---> last line mode.
+
+last line mode --- ESC ---> command mode.
+
+
+
+Copy paste in vi editor
+
+
+fruits.txt already exist
+
+>> vi fruits.txt
+
+now to enter file , press ENTER
+
+>> Enter
+
+now use up down key to go to a line.
+
+to copy a line, move insert cursor to that line and press yy
+
+>> yy
+
+copy multiple lines
+
+>> y3y
+
+this will copy current line and 2 lines below it, 3 in total.
+
+now to paste a line, go to line above the place you want to paste.
+
+now press p
+
+>> p
+
+
+Now to save and exit, press capital z two times
+
+>> SHIFT + ZZ
+
+
+To delete a line
+
+Enter the file
+
+go to line you want to delete
+
+press dd
+
+>> dd
+
+following line will be deleted.
+
+Suppose you want to delete multiple lines
+
+go to a line, you need to specify now how many more lines below the current line you want to delete
+
+>> d2d
+
+this will delete current line and 2 lines below it.
+
+suppose we have contents 
+
+   a
+-->b
+   c
+   d
+   e
+
+
+and cursor is at b
+
+after doing >> d2d
+
+we will have 
+
+  a
+  e
+
+b, c, d are deleted.
+
+
+
+to do UNDO operation we can press small u
+
+>> u
+
+
+to delete characters one by one from cursor position without going in insert mode
+press x
+
+>> x
+
+x works as backspace in command mode.
+
+
+
+to search any word from top press forword slash / and write the word, press enter
+
+>> /word
+>> Enter
+
+cursor will go to that word.
+
+To search any word from bottom
+
+>> ?word
+>> Enter
+
+To navigate to next occurence of searched word
+
+>> n
+
+To go to previous occurence of searched word
+
+>> shift + n
+
+To insert new lie
+
+insert line below
+
+>> o
+
+insert line above
+
+>> shift + o
+
+If vi puts you in insert mode, just press ESC to come out of it and then enter commands of you choice.
+
+
+
+
+
+Now how to open a file with cursor placed on particular line, 
+
+if we want to open a file with cursor on 5th line, we would do
+
+>> vi +5 <filename.txt>
+
+after file has been opened, to go to line 5
+
+>> :5
+
+To go to beginning of last line, 
+
+>> shift + g
+
+to check history of commands in vi 
+
+>> :history
+
+
+ADVANCED UTILITIES
+
+To repeat last command, press period (.)
+
+>> .
+
+To find and replace a word in entire file
+
+>> :%s/<word to be replaced>/<word to replace with>/g
+
+g means to replace from top to bottom
+
+
+e.g. to replace cherry with nocherry
+
+>> :%s/cherry/nocherry/g
+
+
+EXECUTION OF COMMANDS IN VI EDITOR
+
+>> :! <command>
+
+e.g.
+
+>> :! ls
+
+
+Splitting the screen
+
+in vi's command mode, to split terminal screen ,press
+
+>> :sp
+
+now current file will be shown in both partitions, up and down
+
+to navigate between partitions, press 
+
+>> ctrl + w
+
+now in both partitions, same files are open, to open different file in current selected partition, 
+
+>> :e <filename.txt>
+
+To do a vertical split
+
+>> :vsp
+
+you can open mulitple splits, 
+
+ctrl + w to navigate up and down, 
+
+to go to right split
+
+>> ctrl + w
+>> l
+
+
+To go to left split
+
+>> ctrl + w
+>> h
+
+
+To go to lower split
+
+>> ctrl + w
+>> j
+
+To go to upper split
+
+>> ctrl + w
+>> k

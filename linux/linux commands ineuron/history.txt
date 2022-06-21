@@ -1,0 +1,3 @@
+history command is used to see history of commands typed on console
+
+>> history

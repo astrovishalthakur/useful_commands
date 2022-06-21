@@ -1,0 +1,38 @@
+we are on sub-branch_1
+
+we make some changes
+
+now we commit those changes
+
+now we checkout to main branch
+
+now to merge the changes with main branch, we do
+
+
+>> git merge <sub-branch1>
+
+we don't need to mention receiver branch, since the current branch we are on will be the receiver.
+
+FAST FORWARDING
+
+Suppose you are on main branch,
+
+you create new branch, makes a commit there
+
+now merge it with main.
+
+>> git merge <sub-branch>
+
+What git will do that it just puts that commit on main as if it was made on main itself. Because no other commmit was made on main after this particular branch was created, so it doesn't matter whether we show it as different branch or commit on main. Here reason for creating the different branch in the first place was that you didn't want to make changes on main directly, or testout some features.
+
+
+To avoid git doing that, and show commit made on sub branch as seperate entity. we can pass flag called no fastforward or --no-ff
+
+>> git merge --no-ff <sub-branch>
+
+There is another command as
+
+>> git merge --ff-only <branch-name>
+
+Above command says that go ahead and do merge operation only if fast-forwarding is possible, otherwise abort the operation.
+

@@ -1,0 +1,5 @@
+used to kill processes
+
+>> sudo kill -9 <pid>
+
+you can see pid by >> top command

@@ -1,0 +1,49 @@
+suppose you are working with a project
+
+
+you have made many commits
+
+
+now its tough to remember commits by SHAs
+
+We can assign tags to commits
+
+>> git tag -a <tag-name> -m "<message>" <4-5 sha lines>
+
+e.g.
+
+>> git tag -a ticket123 -m "tag with name ticket123" ab89e8445
+
+
+To see all tags present
+
+>> git tag --list or -l
+
+To see tags with there messages
+
+>> git tag -l -n
+
+Deleting tag
+
+>> git tag -d <tag-name>
+
+e.g.
+
+>> git tag -d ticket123
+
+
+TAGS are not pushed to remote automatically
+
+but they are pulled automatically when we do a pull
+
+
+
+Pushing tags to remote
+
+push one by one
+
+>> git push origin <tag-name>
+
+To push all tags
+
+>> git push origin --tags

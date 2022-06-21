@@ -1,0 +1,39 @@
+Here we will see how to compress files.
+
+install gzip package first
+
+>> sudo apt-get install gzip
+
+
+check size of file
+
+>> du -sk zippedfile.tar
+
+
+
+shows numerical value which generally is in KB
+
+To see it written with kb
+
+>> du -sh zippedfile.tar
+
+
+compress a file
+
+>> gzip filename.extension  e.g.(gzip file.tar)
+
+
+
+unzip a zipped file
+
+>> gunzip file.zip
+
+
+
+Another effecient algorithm for compressing is bunzip version 2
+
+>> bzip2 filename.ext
+
+to unzip it we do
+
+>> bzip2 -d file.bz2

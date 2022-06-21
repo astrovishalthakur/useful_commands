@@ -1,0 +1,39 @@
+-- Used to combine info from different tabls into single one
+INSERT INTO branch VALUES(4, "Buffalo", NULL, NULL);
+
+SELECT * FROM branch;
+
+--Find all branches and names of the managers
+SELECT employee.emp_id, employee.first_name, branch.branch_name
+FROM employee
+JOIN branch
+ON employee.emp_id = branch.mgr_id; 
+
+
+-- WE have 4 types of joins, above is normal join, now we will do left join
+-- When we use left join, we include all rows from left table, i.e. employee in our case
+-- but only the rows which satisfy condition will be included from right table.
+SELECT employee.emp_id, employee.first_name, branch.branch_name
+FROM employee
+LEFT JOIN branch
+ON employee.emp_id = branch.mgr_id; 
+
+-- inversely
+SELECT employee.emp_id, employee.first_name, branch.branch_name
+FROM employee
+RIGHT JOIN branch
+ON employee.emp_id = branch.mgr_id; 
+
+
+-- there's a fourth type of join called full outter join, which is basically combination of left and right join
+-- we can't do it in mysql.
+
+
+-- Join 3 tables
+
+SELECT orders.orderID, customers.customer_name, shipper.shipperID
+FROM (( orders
+INNER JOIN customers ON orders.customerID = custoers.customerID)
+INNER JOIN shippers ON orders.shipper_id = shippers.shipperID
+)
+LIMIT 5;

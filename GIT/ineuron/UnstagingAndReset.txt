@@ -1,0 +1,49 @@
+Git Checkout
+
+Suppose you had a file commited.
+You made some changes in file.
+
+>> git diff 
+
+above command will show you the changes made after previous commit.
+
+To reset these changes, or
+suppose if you have saved your work in local directory but not yet staged and commited, you can undo the changes by 
+
+
+############################################
+GIT CHECKOUT TO UNDO CHANGES IN WORKING AREA
+############################################
+
+git checkout command
+
+>> git checkout -- <file-name>
+
+to discard all changes
+
+>> git checkout .
+
+
+
+above command will undo the changes and make file same as it was when we did last commit.
+Now above command works if you have not added the new files to staging area
+
+
+
+If you have added you modified file to staging area, we need to unstage it
+
+command for unstaging a file is 
+
+>> git reset HEAD <file-name>
+
+To unstage all files use .
+
+>> git reset HEAD .
+
+or we can do
+
+>> git restore --staged <filename>
+
+now to restore changes,
+
+>> git checkout -- <filename>

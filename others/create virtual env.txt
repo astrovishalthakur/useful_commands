@@ -1,0 +1,12 @@
+first navigate to the desired directory of project in cmd
+then type:  
+>> virtualenv <env name>
+
+ of your choice, eg. env1,etc.>
+a folder of your given name will be created in project folder.
+to activate it. go to your <venv1, etc> folder
+then go to Scripts folder
+type activate.
+this will activate the venv.
+to deactivate it, 
+type deactivate.

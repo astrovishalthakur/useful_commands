@@ -1,0 +1,48 @@
+To see list of stashes
+
+>> git stash list
+
+output will be something like
+
+stash@{0} : On <branch-name>: <stashing message>
+stash@{1} : On <branch-name>: <stashing message>
+
+Now go to branch where you stash lives.
+
+
+To see information about particular stash
+
+do 
+
+>> git stash show stash@{<stash-number>}
+
+for example, if you want to see information (files modified, no. of insertions, deletions), in 3rd stash, you can do something like
+
+>> git stash show stash@{3}
+
+
+we can save mulitple stash, and on different branches, just make sure that you when you are retreiving the stash, you mention it correctly.
+
+HOW TO RETREIVE STASH
+
+>> git stash pop stash@{0}
+
+to retreive latest stash
+
+>> git stash pop
+
+There is another way of retreiving stash
+
+>> git stash apply stash@{0}
+
+Difference between pop and apply is 
+
+On doing pop you remove stash from list of stashs
+
+On doing apply, you do get your stash back but it still remains in list.
+
+
+basically, pop is cut and paste
+apply is copy and paste.
+
+Apply is used if we want to apply same stash to multiple files.

@@ -1,0 +1,14 @@
+open cmd
+go to folder which you wish to open notebook in
+then type 
+>> jupyter notebook
+it will open the browser.
+you can create new folders or new .ipynb file
+
+
+# to trust a notebook.
+>>jupyter trust notebook-name.ipynb
+
+
+to open a notebook 
+>> jupyter notebook notebookname.ipybnb

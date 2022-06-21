@@ -1,0 +1,49 @@
+# less command
+
+cat filename.txt
+
+above command displays whole file in terminal.
+
+if the file is very large, it will take its sweet ass time to print all the contents.
+
+and after printing all contents, we can see the contents of little lower part of file only
+
+it won't let us scroll to the top of file..
+
+basically there is a scrolling limit on terminal.
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@
+To get solution of this problem, we use less command.
+
+>> less filename.txt
+
+This will only print that much content of file as much your terminal size is.
+
+Press:
+down key: To go to next line
+up key:   To go to previous line
+Space:    To go to next page.
+B:        To go to previous page.
+G:	   End of the file.
+g:	   Top of page
+
+/Pattern + Enter:  To search something/pattern up to down.
+/book + Enter:  Will highligh first word "book"
+
+Press n to see next "book" word.	   
+
+?book:        Search book down to up.
+
+q to quit
+
+
+
+
+
+
+
+
+
+
+
+

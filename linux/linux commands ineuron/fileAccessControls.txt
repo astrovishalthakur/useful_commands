@@ -1,0 +1,39 @@
+File Access Controls
+
+Access Control for user
+
+-- /etc/passwd
+-- /etc/shadow
+
+Access Control for group
+-- /etc/group
+
+
+Q. What is in /etc/passwd ?
+Ans: It constains user information.
+
+fields in contents-->
+
+username:x(for password):uid:gid:Gecos:home directory: default shell
+
+gecos--> fullname + work phone + personal phone (all are optional)
+
+
+Q. What is in /etc/shadow ?
+Ans: It contains user passwords in hashed form.
+
+fields in contents-->
+
+username: Password:lash change: minage: maxage: warning: inactive: Expiary Date. 
+
+
+Group files
+
+/etc/group
+
+It tells about groups
+
+contents of fields-->
+
+groupname: password: gid: user list
+

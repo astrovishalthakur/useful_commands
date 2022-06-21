@@ -1,0 +1,48 @@
+create multiple files:  touch filename.ext filename2.ext filename3.ext
+
+show contents of directory:  ls
+
+show current directory path:  pwd
+
+go to d drive: cd D:
+
+absoulte path begins with forward slash: cd /Users/Vishal\ Thakur
+
+slash signifies root directory that is starting of c drive
+tilde signifies home directory i.e. Your folder in users folder
+
+relative path: cd ../../pets
+
+to make directory: mkdir hello hi hola
+will make 3 folders with hello, hi and hola names
+
+make a folder one folder up: mkdir ../hello
+
+make hello here and hola one folder up: mkdir hello ../hola
+
+to look information about a command: man "command"
+e.g.  man ls
+man command is not present in git bash, so we will use --help
+e.g. ls --help   or     dir --help
+
+
+we will see some flags which we can pass along the commands
+e.g. ls -s lists contents in sorted order
+ls -l lists contents with detailed information.
+we can also combine multiple flags 
+
+
+to see what directories you make while using mkdir, use -v
+e.g.  mkdir -v hello hola hi.
+
+to create a file use touch command
+touch is actually use to access premade files, it just updates the access time
+but if a file doesn't exist, then it will create one for us.
+e.g.  touch filename.extension  
+      touch hello.txt
+
+
+permanently delete a file: rm <filename.ext>
+
+delete a empty folder: rmdir <foldername>
+delete a non empty folder: rm -rf <foldername>

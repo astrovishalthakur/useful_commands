@@ -1,0 +1,18 @@
+now we will see how to clean stash.
+
+
+There are two ways to delete them.
+
+1. Delete all stashes
+
+2. Delete particular stash.
+
+
+To drop 2nd stash, do
+
+>> git stash drop stash@{0}
+
+
+To delete all stashes
+
+>> git stash clear

@@ -1,0 +1,5 @@
+when we already have a image of container in our local storage, with local name (e.g. elastic_hellman), we can start it with start command
+
+>> docker start elastic_hellman
+# or
+>> docker start b4f9e4i8ke(id)

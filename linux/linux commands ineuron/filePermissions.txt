@@ -1,0 +1,126 @@
+All file and directory in Linux system is assigned 3 types of owner 
+-user
+-group
+-others.
+
+All file and directory in Linux system has following 3 permissions defined for all the 3 owners
+
+--Read(r)
+--Write(w)
+--Execute(x)
+--Nothing(-)
+
+
+>> ls -lrt
+
+it will show us information like
+
+e.g.  
+
+drwxr-xr-x 2 astrovishalthakur astrovishalthakur 4096 Apr 12 20:23 Videos
+drwxr-xr-x 2 astrovishalthakur astrovishalthakur 4096 Apr 12 20:23 Templates
+drwxr-xr-x 2 astrovishalthakur astrovishalthakur 4096 Apr 12 20:23 Public
+drwxr-xr-x 2 astrovishalthakur astrovishalthakur 4096 Apr 12 20:23 Pictures
+
+
+d means directory
+rwx means read write execute 
+
+To change permission of file, we use command 
+--chmod
+
+
+
+Q. What is the reason permissions are written 3 times ?
+Ans. The first set pertains to the owner, the second to the owner group, and the third to everyone else.
+
+
+There are two ways to change file permissions
+
+1. Numeric mode
+2. Symbolic mode
+
+
+Numeric Mode:
+
+bit          :            r   ||     w     ||      x      ||     -     ||
+Action       :          read  ||   Write   ||    Execute  ||  Nothing  ||
+Octal Values :           4    ||    2      ||      1      ||     -     ||      
+
+
+
+Symbolic Mode:
+
+chmod u+rwx/g+r-x/o-rwx filename
+
+
+how to give permission in numeric mode
+
+read = 4, write = 2, execute 1, nothing 0
+
+suppose you want to give all permissions, then 
+total permission value = 4+2+1+0 = 7
+
+we say
+
+>> chmod 777 <filename.txt>
+
+
+e.g. to give permission as
+r-xr---wx (i.e.  read-execute, read, write-execute)
+
+we say
+>> chmod 543 <filename.txt>
+
+
+0 = no permission
+1 = only execute
+2 = only write
+3 = only write and execute
+4 = only read
+5 = only read and execute
+6 = only read and write
+7 = read write and execute
+
+e.g.
+rwxr--r-x means 
+user: read, write, execute
+group: read
+others: read, execute.
+
+
+
+
+
+
+
+
+SYBOLIC MODE:
+
+u+rwx  : giving user read write execute permission
+
+g+r-x : giving group read but removing the execute (minus sign in front of x)
+
+
+>> chmod <symbolic_mode> <file_name>
+
+e.g. give read to all users, groups, others and remove write from all
+
+>> chmod ugo+r-w <filename>
+
+
+##################################################
+##################################################
+
+
+- Removes the specified permissions.
++ Adds specified permissions.
+= Changes the current permissions to the specified permissions. If no permissions are specified after the = symbol, all permissions from the specified user class are removed.
+
+
+e.g.
+
+Give the members of the group permission to read the file, but not to write and execute it:
+
+>> chmod g=r filename
+

@@ -1,0 +1,114 @@
+Systemd is now used by default in most linux distributions, from Fedora and Red Hat to Ubuntu, Debian, openSUSE and Arch. 
+
+The systemd's status and control running services.
+
+
+- Introduction to system
+- Creating service unit file
+
+To check systemd version
+
+>> systemd --version
+
+To see information about system processes
+
+>> systemd-analyze
+
+Startup times
+
+>> systemd-analyze blame
+
+To understand need of service management let's take the example
+
+We have a node app created.
+
+We run the app--> (node app.js)
+
+now server is shown running processess in terminal.
+
+Now we can't type any commands in that terminal
+
+We either need to start a new terminal instance.
+
+or
+
+
+Close the app by doing (ctrl+c) etc.
+
+We don't want that
+
+Our requirements are
+
+1. App don't stop on doing ctrl+c meaning service or server should continue to run in the background.
+
+2. Ther should be a service account to start service
+
+3. Service should restart if it crashes down.
+
+4. Restart after 25 seconds(or any specified time)
+
+5. Runlevel  -->
+ A runlevel is one of the modes that a Unix-based, dedicated server or a VPS server OS will run on.
+
+
+
+
+We need to create a unit service file to specify all these rules.
+
+Go to this directory
+
+>> cd /etc/systemd/system/
+
+Now create a file say with service extension
+
+
+>> touch flask.service
+
+now open the file
+
+Example contents would be something like
+contents in () are comments
+######################################################################################
+
+
+[Unit]
+Description= FlaskApp Service
+Documentation= https://blahblahblah
+After=network.target (it means app should start after all network services are up)
+
+[Service]
+User=astrovishalthakur
+Group=www-data
+WorkingDirectory=<path to app> (e.g. /home/astrovishalthakur/Desktop/Calculatorapp)
+ExecStart=<path to service which starts the file> (e.g. /usr/bin/gunicorn3 --workers 3 app:app)
+
+(To get path of gunicorn, do 
+>> where gunicorn )
+
+[Install]
+WantedBy graphical.target (this is runlevel)
+
+(now save this file)
+
+
+
+######################################################################################
+
+
+Now we will update our systme daemon
+
+>> sudo systemctl daemon-reload
+
+now run our app
+
+>> sudo service flaskapp reload
+
+>> sudo service flaskapp start
+
+If service doesn't start, we can see its status
+
+>> sudo service flaskapp status
+
+
+Now service will run in background and we can even close the terminal.
+

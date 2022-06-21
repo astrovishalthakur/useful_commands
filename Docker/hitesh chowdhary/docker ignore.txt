@@ -1,0 +1,5 @@
+since we know that we have to delete node modules folder in our node project because docker install it's own node_modules folder when it starts by reading requirements from package.json
+
+Instead of deleting the node_modules folde, we can ignore it by creating a .dockerignore file and putting node_module in it.
+
+.dockerignore works just like .gitignore, and ignores the contents (folders and files) mentioned in it. 

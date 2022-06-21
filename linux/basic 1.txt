@@ -1,0 +1,123 @@
+clear = clear terminal screen.
+
+# man cmd = tells differents attr we can use with a command, eg. = man mkdir
+
+pwd = print working directory
+ls = list folders
+ls / = list subfolders in root
+ls Downloads/ = list all subfolders in download folder present in root.
+ls ~ = same as ls ....because ~ means home
+ls .. = print contents of previous folders
+ls ../.. = print contents of previous to previous folder.
+ls -l = print listings in long format.(means details of folders. (user, rights, time, date, etc.))
+
+drwxr-xr-x 3 = these are what we call user rights
+d = directory
+r = read
+w = write
+x = execute
+
+
+ls - a = gives hidden files as well.
+ls -a -l = gives hidden files as well, in a long list.
+
+ls -s = sort directory by size
+
+ls /Documents/*.html  = search all .html files in documents
+
+pwd > out.txt = it will create a out.txt in home and fill it with output of pwd.
+
+
+ls -d */  = it will only list directories and not files.
+
+man <command name> = gives options for command.
+
+
+navigate folders with space.
+eg. folder name = My Books
+
+cd My\ Books
+cd "My Books"
+cd 'My Books'
+
+##########################
+##################
+###############
+###########
+
+
+## cat command, it is use to display, combine and create files.
+
+## syntax is like >> cat options file1, file2, file3...etc.
+
+## this will print contents of file on terminal
+cat <file name>
+
+
+## this will print contents of file1 and file2 on terminal
+cat <file1.txt> <file2.txt>
+
+## print contents of file on terminal with blank lines not numbered
+cat -b <file.txt>
+
+## this will add line numbers to all lines, blank lines too
+cat -n <file1.txt>
+
+# suppose there are many line breaks in file, following command squeezes all line breaks to single blank line.
+# its not changing the contents but just displying it like that.
+cat -s file1.txt
+
+
+# this add $ symbol at end of each lines
+cat -E filename.txt
+
+
+# create a file
+touch filename.ext
+
+# open a file and over-write some content. (if file doesn't exist, new will be created.)
+cat > filename.ext
+# write some thing and press ctrl + D to exit.
+
+# to not overwrite and just append at the end.
+cat >> filename.txt
+# write contents, it will be appended.
+# ctrl + D to exit writing mode.
+
+# copy contents of file1 and file 2 to file3
+cat file1.ext file2.ext > file3.ext
+
+# create directory
+mkdir dirname
+
+# create directory tree if parent directory exist
+mkdir parentdir/childdir
+
+# create parent and child together(parent doesn't exist)
+mkdir -p parent/child
+
+# create multiple child
+mkdir -p parent/{child1,child2,child3}
+# without spaces and -p can also be written as --parent
+
+# remove directory
+rmdir dirname
+# rmdir doesn't work if directory is not empty.
+
+# if dir has something, use rm command
+rm -r dirname
+# or
+rm -rv dirname
+# for extended information, v means verbose.
+# this will remove dir and files.
+
+# remove directory structure
+rmdir -p dir1/dir2/dir3/dir4
+# show extended information using verbose flag
+rmdir -pv dir1/dir2/dir3/dir4
+
+
+# show directory structures
+ls -R
+
+

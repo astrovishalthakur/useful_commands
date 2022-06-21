@@ -1,0 +1,38 @@
+>>sudo apt install openssh-server
+
+To start the ssh service.
+
+>>sudo service ssh start
+
+To check ssh service status.
+
+>> sudo systemctl status ssh
+
+>> q to get out,
+
+To allow ssh service through the firewall.
+
+>> sudo ufw allow ssh
+
+Enable the firewall.
+
+>> sudo ufw enable
+
+Check ubuntu firewall status. 
+
+>> sudo ufw status
+
+See ip adress
+
+>> ifconfig
+
+if above command doesn't work, do 
+
+>> sudo apt install net-tools
+
+then do again
+>>ifconfig
+
+
+
+

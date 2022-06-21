@@ -1,0 +1,53 @@
+conflicts can occur in many ways.
+
+Let's take a scenario.
+
+you created a branch say <confly1> and made some changes in file1, and commited it.
+
+Now you went back to main and modified same file1 and commited it as well.
+
+now you try to merge confly1 branch with main branch.
+
+(main) >> git merge <confly1>
+
+A conflict will arise since file1 in both main and confly1 has differnt contents, git doesn't know which one to prefer, or which parts need to remain same and how to choose better version of which file. 
+
+Same file on differnt branches with different contents. Which should be kept in main branch after merging.
+
+There are 3 ways of do away with these conflicts. 
+
+1. just abort whole merging operation.
+
+>> git merge --abort 
+
+2. Manually resolve conflicts and then do commit.
+
+3. Use specialized tools.
+
+
+Now to manually remove conflict, 
+open your file1, you will see 
+
+things like this
+
+<<<<<<< HEAD
+modification of main branch
+=============
+modification of confily1 branch
+>>>>>>>>>>>> Conflict.
+
+
+Now you need to edit this file and remove one of the modifications, you can also keep both modifictions, just remove these >>>, ===, <<<< , HEAD and conflict symbols.
+
+Now save the file with best of the two versions or modifications.
+
+now add file
+
+>> git add <file1>
+
+now commit again
+
+>> git commit -m "removed conflict and merged again"
+
+
+Now you will see that merging is done with the commit.

@@ -1,0 +1,117 @@
+CREATE TABLE student (
+    student_id INT PRIMARY KEY,
+    name VARCHAR(20),
+    major VARCHAR(20)
+);
+
+
+
+CREATE TABLE student (
+    student_id INT PRIMARY KEY,
+    name VARCHAR(20) NOT NULL,
+    major VARCHAR(20) UNIQUE
+);
+
+
+
+CREATE TABLE student (
+    student_id INT PRIMARY KEY,
+    name VARCHAR(20) NOT NULL,
+    major VARCHAR(20) cd 
+);
+
+DESCRIBE student;
+
+
+
+DROP TABLE student;
+
+
+ALTER TABLE student ADD gpa DECIMAL(3, 2);
+
+ALTER TABLE student DROP COLUMN gpa;
+
+
+
+INSERT INTO student(student_id, name) VALUES(1, 'Vishal');
+
+SELECT * FROM student;
+
+INSERT INTO student VALUES(2, 'Kate', 'Mathematics');
+
+
+INSERT INTO student VALUES(3, NULL ,'Science');
+
+INSERT INTO student VALUES(4, 'Mohit', 'Biology');
+
+INSERT INTO student VALUES(5, 'Sonia', 'Commerce');
+
+
+# Creating the sql table
+CREATE TABLE student (
+    student_id INT PRIMARY KEY,
+    name VARCHAR(20),
+    major VARCHAR(20) DEFAULT('undecided')
+);
+
+
+# Creating the sql table
+CREATE TABLE student (
+    student_id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(20),
+    major VARCHAR(20) DEFAULT('undecided')
+);
+
+INSERT INTO student(name, major) VALUES('Vishal', 'Computer Science');
+INSERT INTO student(name, major) VALUES('Tarun', 'Electrical');
+INSERT INTO student(name, major) VALUES('Kartik', 'Civil');
+INSERT INTO student(name, major) VALUES('Mohit', 'Arts');
+INSERT INTO student(name, major) VALUES('Sonia', 'Commerce');
+INSERT INTO student(name, major) VALUES('Varun', 'Electrical');
+INSERT INTO student(name, major) VALUES('Puneet', 'Electrical');
+INSERT INTO student(name, major) VALUES('Jyoti', 'Commerce');
+
+
+DESCRIBE student;
+
+SELECT * FROM student;
+
+UPDATE student
+SET major = 'Electronics'
+WHERE major = 'Electrical';
+
+
+DELETE FROM student
+WHERE student_id = 5;
+
+
+DELETE FROM student
+WHERE name = 'Puneet';
+
+SELECT name, major
+FROM student;
+
+SELECT name, major
+FROM student
+ORDER BY name DESC;
+
+
+SELECT name, major
+FROM student
+ORDER BY major, student_id;
+
+
+SELECT *
+FROM student
+LIMIT 2;
+
+SELECT name, major
+FROM student 
+WHERE major = 'Electronics' OR major = 'Commerce'
+ORDER BY major;
+
+SELECT *
+FROM student
+WHERE name IN ('Sonia', 'Jyoti', 'Vishal');
+
+

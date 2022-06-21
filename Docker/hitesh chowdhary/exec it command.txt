@@ -1,0 +1,12 @@
+## The docker exec command runs a new command in a running container.
+
+## The command started using docker exec only runs while the container’s primary process (PID 1) is running,
+## and it is not restarted if the container is restarted.
+
+>> docker exec -it b47e7da175d2 bash
+
+## above command will open a interactive BASH of mongodb(b47e7da175d2 this can be different depending on id at that time)
+
+## -it => -i: keep stdin(input) open even if not attached and -t: allocate a pseudo-TTY(formattable terminal.)
+
+## we can also pass it with -u command to login as some user other than root.

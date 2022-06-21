@@ -1,0 +1,11 @@
+now even though we have created a project, it doesn't mean that our app is created.
+
+We need to again create folder specific to our app
+
+suppose we are creating a blog and want to name our app "blog"
+
+then go to terminal, where manage.py resides and do
+
+>> python manage.py start-app blog
+
+this will create a new folder with name blog.

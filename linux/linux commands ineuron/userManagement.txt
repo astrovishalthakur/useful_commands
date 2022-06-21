@@ -1,0 +1,88 @@
+User Management in Linux
+
+- create users
+- delete users
+- switch users
+
+Creating users
+we need root privileges
+
+>> sudo useradd <user_name>
+>> enter root password
+
+above command only creates user, but doesn't create home directory for it
+
+to create home directory for it as well, we need to use -m flag
+
+
+with flags
+
+>> sudo useradd <user_name> -m -s /bin/bash -g users -c "my comment"
+
+
+
+-m creates default home directory for the user
+-s allows user to use shell 
+/bin/bash is shell used
+-g is used for group
+users is the default group
+-c is used to provide comments for users
+
+To give PASSWORD to user
+
+>> sudo passwd <user-name>
+
+It allows us to set password for user
+if we don't write user-name, it will allow us to set password for root user
+
+
+To see users
+
+>> ls /home/
+
+Deleting user
+
+>> sudo userdel <user_name>
+
+using above command deletes user and its password but doesn't delete the home directory of user.
+
+by doing 
+
+>> ls /home/
+
+you will still see username home directory
+
+It is helpful in organizations when an employee leaves, you want to delete user but keep the work he has done which is present in its home directory
+
+to delete user and its home directory all together
+
+>> sudo userdel -r <user-name>
+
+
+
+Switching between users
+
+>> su <user-name>
+>> enter user password
+
+to log in to root account
+
+>> sudo su
+
+
+###################################33333
+
+
+Now there is another command for adding user called
+>> adduser
+
+>> sudo adduser <username>
+
+This is built upon the native 'useradd' command
+
+It will create user, create directory for that user (like -m flag does)
+Create group of same name as user
+ask us to set password as well
+
+To see differece between both check this link
+https://askubuntu.com/questions/345974/what-is-the-difference-between-adduser-and-useradd

@@ -1,0 +1,17 @@
+some times you wont be unable do things like
+
+>> sudo apt install .....
+
+or 
+
+
+>> sudo apt update
+
+
+then do following thing
+
+
+>> echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null
+
+
+now your dns will be at google, althoug its temprory and on new terminal, we have to do that again.

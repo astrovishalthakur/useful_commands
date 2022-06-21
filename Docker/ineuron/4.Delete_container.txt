@@ -1,0 +1,7 @@
+We can delete the container with its name or id.
+
+>> docker rm <name or id>
+
+e.g.
+
+>> docker rm lucid_hypatia

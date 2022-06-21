@@ -1,0 +1,14 @@
+# touch command
+
+It us used to create empty files as well as to change the timestamps on files.
+
+
+create empty file
+
+touch filename.txt
+
+touch filename  (without ext)
+
+# change timestamp
+
+touch filename  (file already exit. It will update time stamp to current timestamp)

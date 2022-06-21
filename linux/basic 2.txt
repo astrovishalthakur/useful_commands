@@ -1,0 +1,67 @@
+# copy command
+
+>> cp options source destination
+
+>> cp file1.txt file2.txt
+
+# copy to directory
+
+>> cp filee1.txt dir2
+
+# copy multiple files to dir
+
+>> cp file1.txt file2.txt dir2
+
+# if file1.txt is already in dir2, it will be overwritten automatically with contents of file1 we are copying.
+
+# to ask before overwriting, we use -i flag
+
+>> cp file1.txt dir1/
+
+# if dir1 already have file1.txt, it will ask us if we want to overwrite or not.
+
+# we can also give absolute path
+
+# . is used to show current directory as / is used for root
+
+>> cp ../file1.txt ../file2.txt /home/astrovishalthakur/sDesktop/dir1
+
+# copy dir1 to dir2 if dir2 is not empty(use -r "recursive", if its not empty)
+
+>> cp -R dir1 dir2
+
+# if dir2 doesn't exist, dir1 content will go to dir2
+# if dir2 exists, dir1 will be copied whole in dir2
+
+
+# move command
+
+mv options source destination
+
+# mv can be used to rename a file
+
+# suppose we have a file named file1.txt, we can name it file2.txt as
+
+mv file1.txt file2.txt
+
+# move file1.txt, file2.txt to directory called dir
+
+mv file1.txt file2.txt dir/
+
+# if dir already contains file1.txt, it's content will be overwritten.
+
+# we can avoid it by -i flag, which will ask us before overwriting
+
+mv -i file1.txt dir/
+
+# move dir1 inside dir2(it's present)
+
+mv dir1 dir2
+
+# if destination directory is not present, it just renames the directory
+
+# if dir2 isn't present
+# mv dir1 dir2 will rename dir1 to dir2
+
+# -v is verbose and can be used to display information about operations taking place.
+

@@ -1,0 +1,56 @@
+Removing the package
+
+1. remove = package is unistalled but config files related are not removed
+
+2. purge = all files removed related to a package.
+
+3. --purge
+
+
+delete package
+
+>> sudo apt-get remove <package-name>
+
+delete package with all files
+
+>> sudo apt-get purge <package-name>
+
+
+
+uninstalling and removing all files together
+>> sudo apt-get remove --purge <package-name>
+
+
+
+When we install a package, some temporary files are downloaded in the beginning, to remove those files
+
+
+>> sudo apt-get clean
+
+
+download a package without installing it
+
+>> sudo apt-get download <package-name>
+
+
+To see change log of a package like fixes done to a package.
+
+>> sudo apt-get changelog <package-name>
+
+check for broken dependencies
+
+>> sudo apt-get check
+
+auto clean cache ind dierctories.
+
+>> sudo atp-get autoclean
+
+
+To remove dependency no longer required for working of main package
+
+>> sudo apt-get autoremove <package-name>
+
+
+
+
+

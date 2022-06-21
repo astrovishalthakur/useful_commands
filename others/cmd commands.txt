@@ -1,0 +1,39 @@
+show all files: dir
+
+create a folder: mkdir foldername
+
+delete an empty folder: rmdir foldername
+delete a nonempty folder with [y/n] confirmation: rmdir /s foldername
+delete a nonempty folder without [y/n] confirmation: rmdir /s /q foldername
+
+navigate to folder "fol1" : cd <fol1>
+
+create a file: echo > <filename.extension>
+create a file: type nul > <filename.extension>
+
+create a file with message: echo <some text> > <filename.extension>
+
+Delete a file: del <filename.extension>
+
+go to previous file: cd..
+
+go to root directory: cd /
+
+go to new drive: D:
+
+to open a folder in current path use start command: start <foldername>
+
+to open folder using path : start C:\.....\<foldername>
+
+to open a file just type file name with extension : filename.extension
+
+
+
+
+
+
+
+
+
+
+

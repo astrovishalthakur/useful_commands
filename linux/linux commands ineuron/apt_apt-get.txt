@@ -1,0 +1,56 @@
+apt/apt-get
+
+its an powerful command line tool, which works with ubuntu's advanced packaging tool(APT) performing such functions as installation of new software packages, upgrade of existing software packages, updating of the package list index, and even upgrading the entire ubuntu system.
+
+
+install a package, say nmap.
+
+>> sudo apt install nmap
+
+we can also do apt-get
+
+>> sudo apt-get install nmap
+
+Difference between both is that 
+
+apt have secure packages and should be used
+
+apt-get also have unsecure 3rd party packages which can harm your system. So we should only use apt and not apt-get.
+
+
+to remove package
+
+>> sudo apt remove
+
+update all repos
+
+>> sudo apt update
+
+
+Upgrade our OS
+
+>> sudo apt upgrade
+
+
+To check the sources
+
+>> sudo apt edit-sources
+
+search packages
+
+>> sudo apt search <package_name>
+
+
+searching using apt-get
+
+>> apt-cache search telnel
+
+
+
+
+
+
+
+
+
+

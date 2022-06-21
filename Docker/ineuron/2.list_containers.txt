@@ -1,0 +1,7 @@
+show running containers
+
+>> docker ps
+
+show all(running and stopped) containers
+
+>> docker ps -a

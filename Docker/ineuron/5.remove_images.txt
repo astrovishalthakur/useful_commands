@@ -1,0 +1,28 @@
+
+When we try to run a image on docker which is not locally present, docker pulls it from remote docker hub.
+
+now we can create many container using that image, as we did earlier.
+
+To see images present
+
+>> docker images
+
+when we write 
+
+>> docker run nginx
+
+we create a new container from the nginx image,
+
+now we can delete container by giving command
+
+>> docker rm <container name>
+
+to remove the base image
+
+we write
+
+>> docker rmi <image-name>
+
+e.g.
+
+>> docker rmi nginx

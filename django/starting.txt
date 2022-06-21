@@ -1,0 +1,35 @@
+- create a virtual env
+>> virtualenv <venv name>
+
+- activate venv
+>> source venv/scripts/activate
+
+- pip install django
+
+- to see django commands
+
+>> django-admin
+
+-start django project
+
+>> django-adming startproject <project-name>
+
+a directory with name <project-name> will be created at current path
+
+go inside that
+
+there will be one directory with again same name as our project name and a python file called manage.py
+
+run this manage.py like this
+
+>> python manage.py runserver
+
+This will start a server at local host.
+
+Go to chrome and search for
+
+>> localhost:8000
+
+you can see basic website running.
+
+Good thing is that unlike flask, we don't have to write basic webpage in the starting.

@@ -1,0 +1,83 @@
+Aliases are like custom shortcuts used to represent a command (or set of commands) executed with or without custom options.
+
+- Creating aliases
+- Deleting aliases
+- Making permanent aliases
+
+
+To see current alias
+
+>> alias
+
+Now to create our own alias
+
+>> alias <alias-name>=<'command for which alias needs to be created'>
+
+e.g.
+
+to create alias "pp" for command ls -lrt
+
+>> alias pp='ls -lrt'
+
+To remove alias
+
+we do
+
+>> unalias pp
+
+
+Now how to make alias permanent
+
+Now after rebooting the system our alias will get deleted.
+
+To set alias permanently, we need to update bashrc file
+
+
+opening bashrc file
+
+>> vi .bashrc
+
+go to end of the file
+
+type
+
+alias pp='ifconfig'
+
+now save the file
+
+>> :wq!
+
+now if you type 
+
+>> pp
+
+you wont see ifconfig
+
+we need to reload the bashrc file
+
+to do that we do
+
+>> source ~/.bashrc
+
+
+now we will do
+
+>> pp
+
+we will see ifconfig is executed.
+
+Now even if we reboot the system, our alias will still work.
+
+To delete this permanent alias
+
+just go to bashrc
+
+>> vi .bashrc
+
+Delete the command we wrote at the end of the file.
+
+save and exit
+
+reload the file
+
+>> source ~/.bashrc

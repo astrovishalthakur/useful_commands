@@ -1,0 +1,31 @@
+we can enter mysql using mysql command line client,
+
+but we can also do so using other terminals,
+
+type
+
+>> mysql -u root -p
+now type password
+
+To see databases,
+
+>> show databases;
+
+Create database
+
+>> create database <database-name>;
+
+Use database
+
+>> use <database-name>;
+
+delete database
+
+>> drop database <database name>;
+
+you can also save these commands in a file and then run that file
+
+create a folder, in that create a file with ".sql" extension.
+
+now open terminal and navigate to directory where you have your ".sql" file stored.
+

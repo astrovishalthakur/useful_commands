@@ -1,0 +1,3 @@
+gives line count, word count and no. of bytes/characters in a file
+
+>> wc filename.txt

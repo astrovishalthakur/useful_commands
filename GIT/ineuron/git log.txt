@@ -1,0 +1,60 @@
+to see logs
+
+>> git log
+
+see logs in one line
+
+>> git log --oneline
+
+To see previous 3 logs
+
+>> git log -3
+
+>> git log -3 --oneline
+
+To see logs since some date
+
+>> git log --since="2022-01-02"
+
+To see logs until a date
+
+>> git log --until="2022-09-12"
+
+to see logs one week/day/month ago
+
+>> git log --since="1 week/day/month ago"
+
+To see author logs
+
+>> git log --author="<authorname>" 
+
+
+To see logs of commit in which commit message had some words
+
+E.g.
+a commit message had a word "ignoring"
+
+to find log of that commit, we can do
+
+>> git log --grep="ignoring"
+
+
+To see logs between range of two SHAs
+
+>> git log <shaw1>..<shaw2>
+
+To see logs in email format
+
+>> git log --format=email
+
+
+To see git logs in graphs
+
+>> git log --pretty
+
+Sometimes you are boss and needs to
+To see log of every commit
+
+>> git log --graph --oneline --decorate --all
+
+if you ommit --all, you will see logs only of current branch.

@@ -1,0 +1,23 @@
+now instance is launched.
+
+go to dashboard (EC2>instances) to see it.
+
+click on connect option on the top
+
+click on SSH tab
+
+copy the command it displays.
+
+go to your local terminal(like vmware ubuntu, or mobaxterm, etc.)
+
+make sure you are in the directory(in terminal) where you downloaded you key value pair
+
+now paste command in terminal and hit enter.
+
+mobaxterm will connect to remote ubuntu.
+
+it will look something like
+
+>> ubuntu@ip-172-31-26-2:~$
+
+this means you are connected to remote via ssh.

@@ -1,0 +1,84 @@
+Create a repo at github.
+
+copy https url
+
+go to local folder which you want to make as repo in local system
+
+intialize git
+
+>> git init
+
+now add remote link
+
+>> git add remote origin <copied_url>
+
+To see your head pointer in remote,
+just type
+
+>> git remote
+
+To see more information using verbose
+
+>> git remote -v
+
+To see url of remote and other informations
+
+>> cat .git/config
+
+Pushing our code on remoter repo
+
+>> git push -u <remote-head> <branch-you-want-to-push>
+
+usually remote-head is called origin, and generally ypu pust "main" branch to remote, so above command becomes
+
+>> git push -u origin main
+
+To clone a git repository from github
+
+go to repo on github
+
+click clone button
+
+copy https link url
+
+then
+
+>> git clone <url>
+
+above command will clone the remote repo to your computer with same name as on remote.
+
+To give you own name in local system, do 
+
+>> git clone <url> <new_name>
+
+To push changes to our remote repo using master
+
+>> git push
+
+Now suppose you have changes in remote not in local, to get those changes
+
+first we will just import information about those commits, it will not modify files in local repo just tell us the difference
+
+>> git fetch
+
+now to see changes
+
+>> git log --oneline --all
+
+or 
+
+>> git log --oneline origin/main
+
+Now to merge origin/main to local
+
+>> git merge origin/main
+
+
+
+To fetch and merge in one go
+
+>> git pull
+
+To see if local and remote are in sync or not
+
+>> git status -uno

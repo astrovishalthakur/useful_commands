@@ -1,0 +1,78 @@
+# check if docker is installed and working properly.
+# start docker desktop.
+# go to any terminal(say gitbash)
+
+@@@@@@@@@@@
+>>docker run hello-world
+@@@@@@@@@@@
+
+# docker should greet back.
+# e.g.
+#"Hello from Docker!
+This message shows that your installation appears to be working correctly."
+# go to docker desktop, it should show the helloworld app running.
+
+# when we start docker desktop, we are docker client.
+# when we say, docker run hello-world, docker asks docker Daemon(server) for hello-world image stored in our local storage.
+# If it is not present, it asks for dockerhub(via internet)
+# then it will clone that image(hello-world) to our local storage
+# than it will do docker run hello-world again
+# and it will have it this time in local stroage, so it will run smoothly.
+
+# it command helps going in and out of container.
+
+
+# to see images running on docker
+
+>> docker ps -all
+
+# it will also give us id of containers e.g. b47e7da175d2(of mongo image)
+
+# we can't interact with container by default from outside.
+# here comes "it" command.
+# it creates a gateway so that we can reach the things(like terminal) inside container to interact with it.
+
+# let's say we want to execute this mongo image and use mongo bash(mongo's CLI)
+
+>> docker exec -it b47e7da175d2 bash
+
+# we are asking for bash terminal from inside container.
+
+op => root@b47e7da175d2:/#
+
+# above line tells us that we are in root directory of container in mongo shell.
+
+# to activate mongo shell inside mongo bash
+
+>> mongo
+
+# to see databases
+
+>> show dbs
+
+# to exit shell
+
+>> ctrl + d
+
+# to exit container
+
+>> ctrl + d
+
+# now do again
+
+>> docker ps -all
+
+# this will show you that your container is still running.
+# to stop it.
+# there are two commands
+
+1. >> docker stop b47e7da175d2
+2. >> docker kill b47e7da175d2
+
+# first one is preferable. stop commands let processes complete their current task and then stop.
+# second one (kill) kills the process on-spot no matter what it was doing. It could be dangerous sometimes. So use STOP command.
+
+
+
+
+

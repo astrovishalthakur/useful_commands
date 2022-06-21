@@ -1,0 +1,29 @@
+Copy command
+
+>> cp filename.txt directoryname
+
+
+move contents of one directory to other
+
+>> cp -r dir1 dir2
+
+
+if dir2 exists, whole dir1 folder will be copied to dir2.
+
+
+if dir2 doesn't exists, contents of dir1 will be copied to dir2
+
+
+Move command
+
+>> mv filename.txt dirname
+
+
+move directory to directory
+
+>> mv dir1 dir2
+
+
+if dir2 exists, dir1 is moved whole to dir2
+
+if dir2 doesn't exist, contents of dir1 are moved to dir2 and dir1 being empty is now deleted. So basically we are renaming dir1 to dir2

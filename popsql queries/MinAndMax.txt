@@ -1,0 +1,11 @@
+get min and max based on some value
+
+SELECT name, amount FROM employee
+WHERE amount = (
+			SELECT MAX(amount) from employee;
+		);
+
+use min max with groupby
+
+SELECT MAX(amount), name FROM customers
+GROUP BY amount;

@@ -1,0 +1,11 @@
+To see directory structure of git repo
+>> git ls-tree HEAD
+
+
+To see what was directory structure of repo at some commit in time.
+
+copy sha-1 of that commit from git logs
+
+to see directory structure of git at that commit
+
+>> git ls-tree <sha-1>

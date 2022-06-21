@@ -1,0 +1,53 @@
+A group is a collection of users. The main purpose of groups is to define a set of privileges for a give resource that can be shared within the group users.
+
+-Create group
+-Deleting group
+-Add users to group
+-Create user with assigned group
+
+
+see various groups present
+
+>> groups
+
+
+
+how many users in a group
+
+>> getent group <group-name>
+
+
+create group
+
+>> sudo groupadd <group-name>
+
+to see if group got created or not
+
+>> cat /etc/group
+
+
+add user to a group
+
+>> sudo useradd -g <groupname> <user-name>
+
+get user information
+
+>> id <username>
+
+assign user to a group
+
+>> sudo usermod -a -G <group_name> <user_name>
+
+to delete a group 
+
+>> sudo groupdel <group_name>
+
+if the group is primary group of a user, we can't delete the group directly, we need to remove the user first.
+
+>> sudo userdel <user_name>
+>> sudo groupdel <group_name>
+
+
+
+
+

@@ -1,0 +1,7 @@
+zip files together
+
+>> zip zippedFileName.zip file.txt file2.txt file2.txt
+
+unzip zipped file
+
+>> unzip zippedfile.zip

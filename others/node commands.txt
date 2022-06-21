@@ -1,0 +1,5 @@
+to start node: node
+check node version: node -v
+to run a js file, first navigate to directory : node <filename.ext>
+to run a js file with command line arguments: node <filename.ext> arg1 arg2 arg3 ...argn
+exit node: .exit or ctrl + d or (ctrl + c) 2 times

@@ -1,0 +1,37 @@
+create git reprositry: git init
+
+add files to git staging area : git add <filename>
+
+add everything unstaged as git add .
+
+to see status of your repository: git status
+
+unstage files: git restore <file name>
+
+show difference in previous version and new staged version of files: git diff
+
+commit with message: git commit -m "here will be message"
+
+to see commit history of particular git with hash: git show <hash>
+eg. git show ad163e693f5a291a57a60417a7ebd8fd14dddf75
+
+to rollback to previous some point in time: git reset ad163e693f5a291a57a60417a7ebd8fd14dddf75
+"it will unstage the changes". to restore the changes, 
+type: git restore <filename> 
+
+
+
+# adding local git to github
+
+# Create a new repository on the command line
+ 
+# go to github, create repo called test
+>> git remote add origin https://github.com/astrovishalthakur/test.git
+>> git branch -M main
+>> git push -u origin main
+
+
+To pull changes from remote to master, we do
+
+>> git fetch
+>> git pull origin main

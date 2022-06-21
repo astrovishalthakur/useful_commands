@@ -1,0 +1,40 @@
+Types of accounts in linux
+1. User account
+2. SuperUser account
+3. System account
+4. Service account
+
+
+
+to see all users present in system
+
+>> cat /etc/passwd
+
+passwd file contains info about all users of system.
+
+Every user has an user id associated with it.
+
+to see id of current logged in user
+
+>> id
+
+first user created generally has uid 1000
+
+uids can be set to choice when creating the user
+
+root user generally has id as 0
+root is also called superuser
+this user is created when we install os for first time
+it has all priveliges.
+
+users can be grouped together
+
+to see groups
+
+>> cat /etc/groups
+
+
+For some applications which provide services, service accounts are created
+
+e.g. nginx, apache, etc.
+

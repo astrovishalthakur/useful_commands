@@ -1,0 +1,40 @@
+used to group row together based on some condition.
+
+e.g.
+
+we have following data
+
+name   class
+
+vishal  12
+sonia   12
+pooja   12
+mohit   10
+kushal  10
+kartik  10
+sujal   9
+
+then following command 
+
+SELECT name, class FROM students
+GROUP BY class
+
+will return 
+
+name   class
+
+Vishal 12
+mohit  10
+sujal   9
+
+We see that first name out of all names who are in similar class are shown.
+Other rows are still present there, but since they are grouped together, we don't see them in output. Sonia and Pooja are still with Vishal but we don't see them.
+
+Now question is, Why use GROUP BY
+
+We actually use GROUP BY in combination of other methods
+
+e.g. COUNT
+
+SELECT name, class, COUNT(*) FROM students
+GROUP BY class;

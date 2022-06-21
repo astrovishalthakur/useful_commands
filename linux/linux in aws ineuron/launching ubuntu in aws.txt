@@ -1,0 +1,23 @@
+go to aws
+
+login with IAM account
+
+search services
+
+search for EC2 instance
+
+select Ubuntu from AMI's
+
+now start modifying it.
+
+Create a key value pair
+
+also go to networking rules and add rules for 
+
+-ssh
+-http
+-https
+
+now you can also give name to your machine on the top
+
+now launch it.

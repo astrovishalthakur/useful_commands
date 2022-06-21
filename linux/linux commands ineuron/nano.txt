@@ -1,0 +1,12 @@
+nano is a text editor,
+it also offers search, replace, go to line etc.
+
+>>nano filename
+
+# it will open a terminal editor, you can write in it.
+
+To save the file, ctrl + o
+
+ctrl + k to cut whole line at cursor position
+
+ctrl + u to paste that line at cursor position

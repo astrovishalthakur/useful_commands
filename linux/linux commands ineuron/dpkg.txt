@@ -1,0 +1,31 @@
+dpkg is package mangager, just like pip in python
+
+it's a low level pakage manager meaning it can only install packages but doesn't install dependency.
+
+it helps in installing .deb files.
+
+installing a zoom package
+
+>> sudo dpkg -i zoom_and64.deb
+
+above -i means install and zoom_and64.deb is debian file.
+
+now starting zoom
+
+>> zoom
+
+now removing zoom or uninstalling it
+
+>> sudo dpkg -r zoom
+
+
+list all packages
+
+>> dpkg -l
+
+search package or
+get details of a package
+
+>> dpkg -s <package-name>
+
+

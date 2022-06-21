@@ -1,0 +1,39 @@
+## Go to mynode folder on D:Developement to see what's inside.
+
+1. bring the base image.
+go to dockerhub and search node
+click official node image.
+
+@@@@@@@@@@@@@@@@
+FROM node:alpine
+@@@@@@@@@@@@@@@@
+
+2. Create working directory.
+
+@@@@@@@@@@@@@@@@@@@@@@
+WORKDIR /usr/nodeapp
+@@@@@@@@@@@@@@@@@@@@@@
+
+# if nodeapp directory isn't there, it will be created.
+
+3. Bring all files
+
+4. run installer
+
+5. Specify commands to run
+
+6. navigate to current directory in terminal, build docker file.
+
+7. now to run it, since our node application will be running on a server, on localhost port(say 3000)
+we can't just simply say, 
+>> docker run "dockerImageName",
+
+we have to provide the port name as well
+
+>> docker run -p 3000:4000 "dockerImageName"
+
+(we usually listen on same ports -p 3000:3000)
+
+-p means port
+3000 is port on our machine
+4000 is port on docker container(this is mentioned on node application(if mentioned))

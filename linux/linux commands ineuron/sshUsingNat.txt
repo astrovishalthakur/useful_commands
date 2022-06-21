@@ -1,0 +1,31 @@
+go to settings in vmbox.
+
+go to network tab
+
+select NAT
+
+click advanced.
+
+check cabled connection
+
+click port forwarding
+
+add new rule.
+
+name it SSH
+
+protocol = TCP
+
+host ip = 127.0.0.1
+
+host port = 2222
+
+guest ip. = 10.0.2.15 <ubuntu ip_address with nat>
+it will be ip adress in machine when you do ifconfig.
+
+guest port = 22
+
+
+now go to mobaxterm, type
+
+>> ssh -p 2222 astrovishalthakur@127.0.0.1

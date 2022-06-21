@@ -1,0 +1,95 @@
+Hard Links and Soft Links
+
+Hard Links:-
+
+Hard links acts like a mirror copy of the original file. These links share the same inodes. Changes made to the original or hard-linked file will reflect in the other.
+
+
+Soft Links:-
+
+Soft Link is an actual link to the original file also known as symbolic link or symlinks. These links will have a different inodes value. The soft link points to the original file so if the original file is deleted then the soft link
+fails.
+
+Suppose ther are two files, original and mirrored
+
+If they are connected with hard link
+If you delete original, nothing will happen to mirror.
+
+If they are connected with soft link
+If you delete original, link from softlink file will be broken.
+
+
+
+Hardlinks have same inode number
+whereas softlinks have different inode number
+
+
+Hardlinks contains contents of original file whereas softlink files is just a path to original file. Like a reference.
+
+Hardlinks can not be created for a directory.
+Softlinks can be created for the directory.
+
+
+
+
+
+
+
+COMMANDS:
+
+
+To create hard link file
+
+>> ln <originalFilename> <mirrorFileName>
+
+To see inodes number of both files, do
+
+>> ls -il <originalFile> <mirrorFile>
+
+We will see that inodes number, written in the beginnig of output will be exactly same for both files.
+
+
+Now we will delete original file
+
+>> rm <originalFile>
+
+now we will see contents of mirror file
+
+>> cat <mirrorFile>
+
+We will see that contents in mirror file pertains even after the original file was deleted.
+
+
+Now To create soft links
+
+
+>> ls -s <originalfile> <mirrorFile>
+
+New mirror file will be created.
+
+
+If we do 
+>> cat <mirrofile.txt>
+
+we will see contents of original file
+
+now let's see node numbers
+
+>> ls -il 
+
+We will see both original and mirror files will have different inode numbers
+also we will see that mirror file has a link to original file
+
+originalFile -> mirrorFile
+
+ Now we will delete original file
+
+>> rm <original file>
+
+now try to open mirror file
+
+>> cat <mirror file>
+
+it will give us error stating no such file exists.
+
+mirror file will still be there, with broken link. You can delete it with "rm" command

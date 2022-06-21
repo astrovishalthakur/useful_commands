@@ -1,0 +1,7 @@
+run docker container
+
+>> docker run <image-name>
+
+e.g.
+
+>> docker run nginx

@@ -1,0 +1,22 @@
+when you want to specify some options only out of which values can be assigned to a variable, we use ENUMS
+
+e.g
+
+we have to store size of t-shirt, then we can specify some sizes, and variable can store only out of them.
+
+
+CREATE TABLE shirts(
+	name VARCHAR(40),
+	size ENUM("small", "medium", "large", "X-large"),
+);
+
+INSERT INTO shirts(name, size)
+VALUES("polo shirt", "small"),
+
+("dress shirt", "big");  --> this command will not work since "big" is not defined for size.
+
+There is another data type called
+
+size SET("", "small", "large")
+
+as you can see SET can also store null values, but ENUM can't.

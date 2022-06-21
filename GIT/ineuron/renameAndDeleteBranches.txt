@@ -1,0 +1,38 @@
+now there is no concept of renaming in linux.
+In linux if you want to rename, you need to move it into directory with new name.
+
+Git is also made by developer of git, so we do same here
+
+we can't rename a branch, so we move branch to branch with <new name>.
+
+
+>> git branch -m <current_branch> <new_branch>
+
+
+To delete a branch
+
+>> git branch -d <branch_name>
+or
+>> git branch --delete <branch_name>
+
+We can't delete current branch.
+
+
+Now suppose we made some changes in sub-branch and commited the changes.
+
+now we switched back to main branch.
+
+now changes done in sub-branch is not still merged with main.
+
+if we want to delete sub-branch
+
+>> git branch -d <branch-name>
+
+this will throw error saying that 
+
+The branch '<sub-branch>' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D <sub-branch>'.
+
+So to forcefully delete a branch we do it with flag -D
+
+>> git branch -D <branch-name>

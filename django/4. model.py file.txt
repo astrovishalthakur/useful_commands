@@ -1,0 +1,118 @@
+now we need to create some content to fill in database provided.
+
+We do so by filling in models.py file in our blog folder.
+
+see what we did there, it was almost empty file before.
+
+Fields of database can be created in form of classes which also inherits from models.Model class.
+
+After applying changes in we need to rerun migrations.
+
+>> python manage.py makemigrations
+
+Now a migratins folder will be created, we can see migrations we did in that folder under names like 0001_initial.py etc.
+
+
+now we created class for post field, but if we want to see how sql code is implemented by django in backend, we can do.
+
+>> python manage.py sqlmigrate blog 0001 
+
+blog is our app name
+0001 is initial update number. as in file 0001_initial.py
+
+we still haven't updated actual database, to do so we run migration command
+
+>> python manage.py migrate
+
+
+Need of migrations?
+
+If we needed to update data in our sql database, it would be really tough to do so by writing some complex sql code and also considering integrity of other data items.
+
+migrations does this for us.
+
+we do changes, then run command makemigrations, and then run command migrate
+
+
+now to use django python shell we can write following command
+
+>> python manage.py shell
+
+It will open a shell, you can see all user by first importing posts and users.
+
+
+>> from django.contrib.auth.models import User
+>> from blog.models import Post
+
+Now to see all users,
+
+>> User.objects.all()
+
+To see first user
+
+>> User.objects.first()
+
+To filter users
+
+>> User.objects.filter(username="astrovishalthakur")
+
+this will return many results if many users of same name exists.
+
+To see only first user, we type
+
+>> User.objects.filter(username="astrovishalthakur").first()
+
+To capture this user in a variable, we do 
+
+>> user = User.objects.filter(username="astrovishalthakur").first()
+
+now we can access this user by variable name.
+
+>> user
+
+op = <User: astrovishalthakur>
+
+to see userid, we can do 
+
+>> user.id
+
+or see primary key
+
+>> user.pk
+
+we can also access user by id instead of username
+
+>> user = User.objects.get(id = 1)
+
+Now lets create a post by making this user as author.
+
+>> post_1 = Post(title="Blog 1", content="First Post content!", author=user)
+
+now we need to save this post
+
+>> post_1.save()
+
+Now we can see all posts by doing
+
+>> Post.objects.all()
+
+We can also do by user id
+
+>>> post_2 = Post(title = "Blog 2", content="Second Post content!", author_id = user.id) 
+
+Get all posts that user has created,
+
+>> user.post_set.all()
+
+We can create post directly from user
+
+>> user.post_set.create(title="Blog 3", content="Third Post content!
+")
+
+<Post: Blog 3>
+>>> Post.objects.all()
+<QuerySet [<Post: Blog 1>, <Post: Blog 2>, <Post: Blog 3>]>
+
+see that we didn't specify the author name, because django knows that user is the author.
+
+Now even though we have create Post model, we can't see or access them in admin page, for that we need to register our model in admin.py file present in blog dir.

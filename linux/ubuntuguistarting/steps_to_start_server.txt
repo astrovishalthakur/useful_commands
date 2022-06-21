@@ -1,0 +1,7 @@
+1. open ubuntu
+2. sudo /etc/init.d/xrdp start
+3. go to remote connection app
+4. localhost:3389
+5. username and password
+6. enjoy
+7. sudo /etc/init.d/xrdp stop

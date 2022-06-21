@@ -1,0 +1,86 @@
+Different ways of creating users
+
+- User with different home directory
+- User with a specific user id
+- User with a specific Group id
+- Add a user to multiple Groups
+- Add a user without Home directory
+- User with account expiry date
+- User with password expiry date
+- Add a user with custom comments
+- Create user login shell in linux
+
+
+Create user in a directory
+
+say we have directoy called /data/users as a home directory
+
+then we do 
+
+>> sudo useradd -d /data/users/ <new-user-name>
+
+now to set password for this newly created user
+
+>> passwd <user-name>
+
+if permission is denied, switch to root account
+
+>> su root
+
+now try again setting the password.
+
+
+
+Assign user to a group
+
+>> sudo useradd -g <groupname> <username>
+
+
+attach user to multiple groups
+
+>> sudo usermod -a -G <group1>,<group2>,<group3> <username>
+
+
+Create new user and assign to multiple groups
+
+>> sudo useradd -G <group1>,<group2>,<group3> <new-user-name>
+
+
+
+User with account expiry date
+
+>> sudo useradd -e <year>-<month>-<date> <user-name>
+
+e.g.
+
+>> sudo useradd -e 2022-12-21 vishaluser
+
+now to see user details
+
+>> sudo chage -l vishaluser
+
+
+We can add comments as we create user
+
+>> sudo useradd -c "hello there. This is demo comment" <user-name>
+
+
+
+To create user login shell
+
+When we create user, he is assigned defaulg shell
+
+/bin/sh  which is bourne shell
+
+To assign it new shell, say bash shell we do:
+
+>> sudo useradd -s /bin/bash <user-name>
+
+
+
+To create a user with shell where it can not login
+
+>> sudo useradd -s /sbin/nologin <username>
+
+
+

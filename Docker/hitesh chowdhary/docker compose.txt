@@ -1,0 +1,7 @@
+create docker-compose.yml file
+
+to run it, 
+
+type in cmd
+
+>> docker-compose up --build

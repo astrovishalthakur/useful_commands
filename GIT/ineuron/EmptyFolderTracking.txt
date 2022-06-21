@@ -1,0 +1,21 @@
+git doesn't keep a track of empty folder
+
+suppose you create new empty folder and do 
+
+>> git status
+
+It will show that no changes were made.
+
+Now some times it is desirable to track even empty folders, when we need them in future.
+
+Pepole usually take care of this matter by putting a random or empty file in that folder.
+
+Now since folder is not empty, git will track it.
+
+A neat trick is to add a file with . so that it remains hidden.
+
+e.g. 
+
+>> folder/.gitkeep
+
+now folder will be tracked an .gitkeep will remain hidden. Also we can name the file anything, gitkeep is popular name as contrary to gitignore. 

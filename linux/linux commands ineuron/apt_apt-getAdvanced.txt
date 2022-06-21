@@ -1,0 +1,79 @@
+list all available packages at apt-get store
+
+>> apt-cache pkgnames
+
+
+
+Pacakage name and description
+
+>> apt-cache search <package-name>
+
+search gives little description but show gives more information
+
+Package details
+
+>> apt-cache show <package-name>
+
+
+see dependencies to run a main package, or dependency of the main package
+
+>> apt-cache showpkg <package-name>
+e.g.
+
+>> apt-cache showpkg netcat
+
+
+stats about packages in apt-get like types and number of packages.
+
+>> apt-cache stats
+
+update packages
+
+>> sudo apt-get update
+
+
+update all os packages installed in system
+
+>>sudo apt-get updgrade
+
+
+
+install multiple packages
+
+>> sudo apt-get install <package1> <package2> <package3>
+
+
+install packages without upgrading the existing packages.
+
+suppose you already have a package, to avoid upgrading them,
+
+>> sudo apt-get install <package-name> --no-upgrade
+
+
+to only do the upgradation of a package
+
+>> sudo apt-get install <package-name> --only-upgrade
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
