@@ -25,13 +25,22 @@ To see url of remote and other informations
 
 >> cat .git/config
 
-Pushing our code on remoter repo
+Pushing our code on remote repo
 
 >> git push -u <remote-head> <branch-you-want-to-push>
 
 usually remote-head is called origin, and generally ypu pust "main" branch to remote, so above command becomes
 
 >> git push -u origin main
+
+By default, origin is name of reference to remote
+To see it
+
+>> git remote --verbose
+
+We can rename this remote reference to somethin else, e.g. "disco" like this
+
+>> git remote rename origin disco
 
 To clone a git repository from github
 
