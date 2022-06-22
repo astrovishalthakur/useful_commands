@@ -24,4 +24,4 @@ curl command name choice
 
 curl only shows content on console, to download and save data to a file we use
 
->> curl -o filename.ext <urlpath>
+>> curl -o filename.txt <urlpath>
