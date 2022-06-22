@@ -1,0 +1,27 @@
+ways to make persistent data storage in docker using volume mapping.
+
+While working with docker container I always have a fear what if the container are deleted accidentally .
+All of the data we have stored will be deleted with the deletion of the container .
+To mitigate these problem we will be using docker volumes.
+
+
+
+This method is to mount a specific directory on the host to the container.
+For this let us make a new folder in the host and map that folder inside the container /data directory .
+
+
+
+Suppose we have our data directory on host computer on following path
+
+--/mnt/c/Users/Vishal/data
+
+and we want to map it to container (say mysql)
+
+now we know that mysql server stores data at location
+
+/var/lib/mysql
+
+so we can map local data dir to mysql dir in following way
+
+>> docker run -v /mnt/c/Users/Vishal/data:/var/lib/mysql mysql
+

@@ -1,0 +1,14 @@
+To inspect docker container,
+
+We can either go to docker desktop and inspect it,
+
+or we can write command
+
+>> docker inspect <container-name>
+
+To check logs, again we can either go to docker-desktop
+
+or 
+
+>> docker logs <container name>
+

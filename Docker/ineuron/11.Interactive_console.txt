@@ -1,0 +1,19 @@
+If we do 
+
+>> docker run <image-name>
+
+It will load the image and start the container, but we can't interact with the application running inside.
+
+Meaning, we can't input any thing in it, if app requires any input.
+
+To make the app interactive, we need to pass -i or -it command.
+
+-i makes container interactive and -t provides it a psuedo tty terminal.
+
+So to make container interactive, always do
+
+>> docker run -it <image-name>
+
+-t : Allocate a pseudo tty
+
+-i : keep STDIN open even if not attached.

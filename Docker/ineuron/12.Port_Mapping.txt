@@ -1,0 +1,57 @@
+When we dockerize an application,
+if application wants to run inside docker,
+docker container is assigned an ip-address and application run on a port.
+
+The port assigned to docker container's application is not accessible to outside world, or internet.
+
+So we can map the dockerized app's port to our local port
+
+suppose we run a docker container and app in it starts.
+
+
+It show that development server is running at 
+
+http://172.17.0.2:5000
+
+in above lines,  172.17.0.2 is the ip address assigned to our docker container and 5000 is port assigned to application.
+
+If we want to map this 5000 port to local port(say 8000), we can type following command when starting the container
+
+
+>> docker run -p 8000:5000 <container-name>
+
+
+more general command is 
+
+>> docker run -p <new-local-port>:<docker-port> <container name>
+
+
+now you can access your application from host machine
+
+go to browser and type
+
+localhost:8000
+
+this will start your app.
+
+You can't access original ip address from host machine.
+
+i.e.  172.17.0.2
+
+
+we can also connect similar ports
+
+say SQL server in docker container is running at 3060 port, then we can assign 3306 to that container on our local machine as well
+
+>> docker run -p 3306:3306 <SQL-image>
+
+
+Summary:
+
+1. mapping is done to connect containers to outside word.
+2. Apps on container runs on some port
+3. Those ports are not connected to internet
+4. So we map them to our local ports so that both can connect and doker port can use our local port as gateway to internet.
+5. we can assign similar(5000:5000) or different (5000:8000) ports, doesn't matter.
+
+
