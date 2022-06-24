@@ -1,0 +1,81 @@
+We can use environment variables usign
+
+-env or -e option with docker run
+
+e.g.
+
+>> docker run -e <env_name> <env_value> <image-name>
+
+suppose you have python app as
+
+###########################
+app.py
+
+
+############################
+
+import os
+
+username = os.environ.get('MY_USERNAME')
+pass = os.environ.get('PASSWORD')
+
+print(username, password)
+
+#############################
+
+now when you build docker file
+
+do this
+
+>> docker build . -t astrovishalthakur/my_image
+
+now to pass environment varibles
+
+e.g.
+
+>> docker run -e MY_USERNAME=astrovishalthakur -e PASSWORD=123passwordistree astrovishalthakur/my_image
+
+
+#################################################
+
+
+To inspect env variables
+
+make sure container is running
+
+
+then 
+
+
+>> docker inspect <container name or id>
+
+now scroll down to env-variables section.
+
+
+
+
+###############################################
+###############################################
+###############################################
+
+one way is to put all env variables in a file called .env
+
+create a .env file
+
+put following in that
+
+
+MY_USERNAME=astrovishalthakur
+PASSWORD=123passwordistree
+
+
+now save it.
+
+
+now when running the image, do so
+
+
+>> docker run --env-file .env astrovishalthakur/my_image
+
+following will use env variables in .env file
+
