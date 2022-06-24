@@ -1,0 +1,94 @@
+Read this first
+
+https://www.cloudbees.com/blog/understanding-dockers-cmd-and-entrypoint-instructions
+
+
+
+suppose we go to terminal and write following command
+
+>> docker run -d ubuntu
+
+this command will create a container with ubuntu image.
+since no further command was given, container will stop.
+
+if you do 
+
+>> docker ps
+
+you will see no running container
+
+but if you do
+
+>> docker ps -a
+
+you will see that a container was indeed created but is now stopped.
+
+
+Suppose you want to keep container alive for some time, then you can do
+
+>> docker run -d ubuntu sleep 30
+
+This will create a deattached ubuntu container and will make it sleep for 30 seconds.
+
+now if you do
+
+>> docker ps
+
+you will see that container is indeed running.
+
+now instead of giving command here on terminal, you can instead write it in docker file itself
+
+
+create a Dockerfile
+
+put in that
+
+#######################
+FROM ubuntu
+CMD sleep 30
+#######################
+
+other format is json format
+
+#######################
+FROM ubuntu
+CMD {"sleep", "30"}
+#######################
+
+now build that file
+
+>> docker build . -t astrovishalthakur/sleepy_image
+
+
+now we can run it normally as
+
+>> docker run -d astrovishalthakur/sleepy_image
+
+
+now suppose we want to override sleep command and make container sleep for 40 sec, we would have to do something like this
+
+>> docker run -d astrovishalthakur/sleepy_image sleep 40
+
+Now suppose you don't want to pass sleep command everytime you start container, you can create an entrypoint.
+
+
+Entry point makes command un-overridden and we only need to pass arguments.
+
+
+Dockerfile
+##################
+FROM ubuntu
+ENTRYPOINT ["sleep"]
+CMD["25"]
+####################
+
+now default sleep time is 25 seconds, by if we want to make it 40, we can simply do
+
+>> docker run -d astrovishalthakur/sleepy_image 40
+
+
+
+
+
+
+
