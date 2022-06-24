@@ -1,0 +1,20 @@
+After image is successfully built.
+
+We can push it to our docker hub
+
+first make sure you are logged in 
+
+>> docker login
+
+then do push
+
+>> docker push
+
+
+This will push your image to docker hub
+
+you can go ther to see it, it's public and available to whole world
+
+To see,
+
+Go to dockerhub login

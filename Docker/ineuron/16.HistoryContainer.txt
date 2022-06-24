@@ -1,0 +1,7 @@
+when we create container, many layers are build
+
+To check size taken by each layer
+
+do
+
+>> docker history <container-name>

@@ -1,0 +1,55 @@
+go to project.
+
+Create a docker file
+
+create it like 
+
+"Dockerfile"
+
+without any extensions
+
+to see demo docker file, go to project
+
+C:/Users/Vishal Thakur/pycharm projects/ blogpost_w_angela_version.
+
+
+After writing whole docker file
+
+let's build image
+
+>> docker build . -t <tag-name>
+
+e.g.
+
+>> docker build . -t blog
+
+. after build in above command means current directory.
+
+-t is tag and blog is tag-name
+
+tag is name of our image.
+
+
+To build with our username
+
+first do login
+
+>> docker login
+
+then
+
+>> docker build . -t <your user name>/<tag-name>
+
+e.g.
+
+>> docker build . -t astrovishalthakur/blog
+
+
+After that we can simply run our image
+
+>> docker run -p 8000:5000 blog
+
+Now you can go to browser, you can run you app on 
+
+localhost:8000
+
