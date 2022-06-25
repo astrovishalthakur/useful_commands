@@ -1,9 +1,51 @@
-services:
-  webapp:
-    image: "astrovishalthakur/mywebapp"
-  db:
-    image: "cassandra"
-  message:
-    image: "redis"
-  orchestration:
-    image: "ansible"
+# services:
+#   webapp:
+#     image: "astrovishalthakur/mywebapp"
+#   db:
+#     image: "cassandra"
+#   message:
+#     image: "redis"
+#   orchestration:
+#     image: "ansible"
+
+
+# now redis and db are already available on dockerhub in form of images.
+
+# so we can directly pull them and run them.
+
+# but our vote_app, result and worker are not built yet.
+
+# so we have to first build them to create images usign infor in Dockerfile.
+
+# so we will give instructions to build them.
+
+# we will also pass location of Dockerfile of all applications.
+
+# see, we use build command with vote_app and also pass the location of Dockerfile.
+redis:
+  image: redis
+
+db:
+  image: postgres
+
+# ./vote is app folder where all source code, including Dockerfile of app resides.
+
+# . means vote folder is present in current working directory where this docker-compose is located. It's basically a relative path.
+vote_app:
+  build: ./vote
+  ports:
+   - 6001:80
+  link:
+   - redis
+result:
+  build: ./result
+  ports: 
+    - 6000:80
+  links:
+    - postgres
+
+worker:
+  build: ./worker
+  links:
+    - redis
+    - postgres

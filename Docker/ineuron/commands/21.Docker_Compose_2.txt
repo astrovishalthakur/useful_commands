@@ -1,0 +1,67 @@
+Voting app understanding.
+
+We have following containers
+
+-- A front-end web app in Python or ASP.NET Core which lets you vote between two options
+
+
+-- A Redis or NATS queue which collects new votes
+
+
+-- A .NET Core, Java or .NET Core 2.1 worker which consumes votes and stores them in…
+
+
+-- A Postgres or TiDB database backed by a Docker volume
+
+
+-- A Node.js or ASP.NET Core SignalR webapp which shows the results of the voting in real time
+
+
+#############
+flow of app
+#############
+
+
+1. Voting-app(python)
+	|
+	|
+	|
+	V
+2. redis(Redis)
+	|
+	|
+	|
+	V
+3. worker(.net)
+	|
+	|	
+	|
+	V
+4. db(PostgreSQL)
+	|
+	|
+	|
+	V
+5. result-app(Nose.js)
+
+
+now to run the containers one by one
+
+>> docker run -name=redis redis
+
+>> docker run -name=db postgreSQL
+
+>> docker run -name=vote_app -p 6001:80 --link redis voting_app
+
+>> docker run -name=result -p 6000:80 --link postgres image_name
+
+>> docker run -name=worker --link=redis --link=db worker
+
+Go checkout docker-compose at 
+
+useful_cmd_info>>docker>>ineuron>>files
+
+
+
+
+

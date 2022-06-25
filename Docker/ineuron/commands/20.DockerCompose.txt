@@ -1,3 +1,7 @@
+Docker Compose is a tool that was developed to help define and share multi-container applications. with Compose, we can create a YAML file to define the services and with a single command, can spin everything up or tear it all down.
+
+
+
 If we don't use docker compose
 
 Suppose we want to run a app which uses many other services. Like cassandra for database, redis , ansible for orchestration.
