@@ -1,0 +1,5 @@
+We can mention networks we need .
+
+Like frontend networks and backend networks
+
+go see docker-compose version 2 file

@@ -9,9 +9,13 @@ version: '2'
 services:
   redis:
     image: redis
+    networks:
+      - backend
 
   db:
     image: postgres
+    networks:
+      - backend
 
   vote_app:
     build: ./vote
@@ -19,11 +23,24 @@ services:
     - 6001:80
     depends_on:
       - redis
+
+    networks:
+      - backend
+      - frontend
   
   result:
     build: ./result
     ports: 
       - 6000:80
+    networks:
+      - backend
+      - frontend
   
   worker:
     build: ./worker
+    networks:
+      - backend
+
+networks:
+  frontend
+  backend
