@@ -1,0 +1,9 @@
+services:
+  webapp:
+    image: "astrovishalthakur/mywebapp"
+  db:
+    image: "cassandra"
+  message:
+    image: "redis"
+  orchestration:
+    image: "ansible"

@@ -1,0 +1,23 @@
+If we don't use docker compose
+
+Suppose we want to run a app which uses many other services. Like cassandra for database, redis , ansible for orchestration.
+
+To use all these things, we will have to run their images one after another.
+
+like
+
+docker run -d myapp
+docker run -d cassandra
+docker run -d redis
+docekr run -d ansible
+
+
+Now doker compose is a file in which we list all these services we require and it helps us to run all these with single command with other parameters as well.
+
+file is a yml file and its name is
+
+docker-compose.yml
+
+Checkout docker-compose file at
+
+useful-commands-info/docekr/ineuron/files/docker-compose.yaml

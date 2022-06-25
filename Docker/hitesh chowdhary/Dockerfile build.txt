@@ -1,6 +1,6 @@
 # we create a Dockerfile
 # for better understanding.
-# go to desktop/useful/mymongo/dockerfil 
+# go to desktop/useful/mymongo/dockerfile 
 # we go to terminal
 # navigate to folder having Dockerfile
 @@@@@@@@@@@@@@@@
@@ -49,8 +49,10 @@ with custom name=>
 
 
 # you will see images, copy image id and run
->> docker run imageid.
 
+@@@@@@@@@@@@@@@@@@@@@@@
+>> docker run imageid
+@@@@@@@@@@@@@@@@@@@@@@@
 
 # now our docker container will start.
 # we have started mongod service in our container on 27017 port.
