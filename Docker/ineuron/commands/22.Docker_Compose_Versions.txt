@@ -1,0 +1,24 @@
+Docker compose have 3 versions
+
+Docker Compose V1
+Docker Compose V2
+Docker Compose V3
+
+Up until now we were discussing about V1.
+V1 is now deprecated.
+
+docker-compose in folder DockerComposeVersion1 is Version 1 so it is deprecated.
+
+Now we will be discussing about V2 and V3.
+
+Let's convert our docker-compose V1 to V2
+
+go to folder DockerComposeVersion2 to see updated docker-compose file
+
+
+In DockerComposeVersion1 we need to mention links to connect relevant containers.
+
+In versions 2 and 3, docker automatically links all containers, so we don't need to mention links in docker-compose.yaml
+
+Se new docker-compose file in DockerComposeVersion2 foler.
+
