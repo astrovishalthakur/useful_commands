@@ -1,0 +1,29 @@
+# Docker compose version 2
+# now in version greater then version 1, we need to mention it here on the top.
+
+# depens_on command tells us that particular container is dependent on some other service, like redis in our case.
+
+# so it makes sure that before starting vote_app, redis should be already start.
+
+version: '2'
+services:
+  redis:
+    image: redis
+
+  db:
+    image: postgres
+
+  vote_app:
+    build: ./vote
+    ports:
+    - 6001:80
+    depends_on:
+      - redis
+  
+  result:
+    build: ./result
+    ports: 
+      - 6000:80
+  
+  worker:
+    build: ./worker
