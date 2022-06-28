@@ -1,0 +1,62 @@
+Let's see how to interact with pods
+
+To see all present pods
+
+>> kubectl get pods
+
+
+Creating pods[D[Drunning[C[C[C[C[C[C
+
+>> kubectl run <podname> --image=<image-name>
+
+e.g.
+
+>> kubectl run hello --image=nginx
+
+Now again to see created pods
+
+>> kubectl get pods
+
+following output will be shown
+
+
+NAME    READY   STATUS              RESTARTS   AGE
+hello   0/1     ContainerCreating   0          9s
+
+
+ready 0/1 means that 0 pods running, but 1 should be running
+
+
+after some time when you again do above command, you will see that now your container has started and pod is running
+
+NAME    READY   STATUS    RESTARTS   AGE
+hello   1/1     Running   0          4m9s
+
+
+To get additional information about you pod
+
+do 
+
+>> kubectl get pod <pod-name> -o wide
+
+e.g. 
+
+>> kubectl get pod hello -o wide
+
+NAME    READY   STATUS    RESTARTS   AGE     IP          NODE             NOMINATED NODE   READINESS GATES
+hello   1/1     Running   0          7m10s   10.1.0.10   docker-desktop   <none>           <none>
+
+
+To see life cycle description of pod
+
+>> kubectl describe pod hello
+
+To generate yaml file from pod description from above command
+
+>> kubectl get pod <pod-name> -o yaml > <path-to-file>/<name-of-file>.yaml
+
+e.g.
+
+>> kubectl get pod hello -o yaml > pod-spec.yaml
+
+

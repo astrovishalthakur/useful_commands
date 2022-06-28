@@ -1,0 +1,6 @@
+to see if kubernetes is installed
+
+type following command
+
+>> kubectl
+

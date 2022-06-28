@@ -1,0 +1,9 @@
+To see logs of pod
+
+>> kubectl logs <pod-name>
+
+e.g.
+
+>> kubectl logs hello
+
+
