@@ -1,0 +1,5 @@
+To see mlflow ui, go to terminal and write
+
+>> mlflow ui
+
+Click enter and a link will generate, follow that link, and you will see ui.
