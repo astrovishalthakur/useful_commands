@@ -1,0 +1,16 @@
+If you want to run the MLflow packed project using MLproject file
+
+you can either do
+
+>> mlflow run .
+
+this will see MLproject file and find conda.yaml file and create new environment as specified in conda.yaml file.
+
+To use current activated env without creating new one, you could do
+
+>> mlflow run . --no-conda
+
+you can also provide parameters in command, parameters are prespecified in MLproject file
+
+>> mlflow run . -P alpha=0.7 -P l1=0.1 --no-conda
+

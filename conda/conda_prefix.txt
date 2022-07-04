@@ -1,0 +1,26 @@
+So, how do you place environments outside of your Conda’s env/ folder? By using the --prefix flag instead of --name when creating an environment.
+
+% conda create --prefix /path/to/conda-env             # Or use -p
+⚠️ Note: This makes an environment called “conda-env” in the specified path.
+
+It’s as simple as that. However, placing environments outside of the default env/ folder comes with two drawbacks.
+
+1️⃣ conda can no longer find your environment with the --name flag. Instead, you’ll need to pass the --prefix flag along with the environment’s full path. For example, when installing packages, which we’ll cover in the next section.
+
+2️⃣ Your command prompt is no longer prefixed with the active environment’s name, but rather its full path.
+
+(/path/to/conda-env) %
+As you can imagine, this gets messy quickly. Like this doozy, for instance.
+
+(/Users/user-name/data-science/project-name/conda-env) %        # 😨
+Fortunately, there’s an easy fix. You just need to modify the env_prompt setting in your .condarc file, which you can do with a single stroke.
+
+% conda config --set env_prompt '({name}) '
+⚠️ Note: This will edit your .condarc file if you already have one and create one if you do not. For more on modifying your .condarc file, see the docs.
+
+Now your command prompt will only display the active environment’s name.
+
+% conda activate /path/to/conda-env
+(conda-env) %                                        # Woohoo! 🎉
+Last, you can view a list of all your existing environments.
+
