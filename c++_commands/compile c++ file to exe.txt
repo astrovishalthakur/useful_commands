@@ -1,0 +1,20 @@
+To compile file, pattern followed is
+
+>> g++ <filename.cpp> -o <exename>
+
+to run exe file
+
+>> ./<exename.exe>
+
+e.g. you make a pattern program
+
+To comile 
+
+>> g++ pattern.cpp -o pattern
+
+To run
+
+>> ./pattern.exe
+
+
+
