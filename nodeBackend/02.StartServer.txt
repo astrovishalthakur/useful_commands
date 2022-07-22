@@ -1,0 +1,18 @@
+Suppose we have written a server js file.
+
+To start the server in the file, we can do
+
+in terminal
+
+>> node <file name.js>
+
+e.g.
+
+If your file name is server.js, which is same as entry point defined in package.json file
+
+
+then you will start server by typing this in terminal.
+
+>> node server.js
+
+

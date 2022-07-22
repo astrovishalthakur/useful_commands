@@ -1,0 +1,8 @@
+>> pip install mlflow
+
+It seems that mlflow use some earlier version of flask, so if you have latest version, you can downgrade it by
+
+>> pip install flask==2.1.0
+
+
+To see demo mlflow project, go to mlflow dir in D:/development/ineuron/mlflow

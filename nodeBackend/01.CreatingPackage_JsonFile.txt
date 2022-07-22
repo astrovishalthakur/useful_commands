@@ -1,0 +1,10 @@
+Now to create package.json file
+
+Do in folder where you want package.json to store.
+
+>> npm init
+
+then change information if you want, or simply click enter if you are okay with default information.
+
+keep clicking enter 4-5 times, and it will create package.json for you.
+
