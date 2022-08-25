@@ -1,0 +1,37 @@
+To create fx project in elipse
+
+Phase 1: Creating Project.
+
+1. go to eclipse.
+2. click new > other
+3. click javaFX project from menu
+4. give name to project, click okay.
+
+
+Phase 2: adding javaFX libraries.
+
+1. right click on project name.
+2. click on build path > configure it
+3. click libraries option
+4. click module path
+5. click add library
+6. click user library
+7. click javafx
+8. Apply and close.
+
+
+Phase 3: Adding VM Arguments.
+
+1. Try to compile your program, or just run it.
+2. now right click on project name in project explorer.
+3. click on run as > edit run configurations.
+4. arguments > VM arguments.
+5. Now paste VM arguments in there, which are present on this folder, or you can get on internet.
+6. Apply and close.
+
+
+Note:
+## Path to your javafx lib is something like this.
+$$$$ D:/javafx/java18/java18/lib/
+
+

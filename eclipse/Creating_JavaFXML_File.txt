@@ -1,0 +1,7 @@
+1. See your project name in project explorer
+2. Right click on Application folder
+3. Click new > other
+4. Select JAVAFXML file (not javafx)
+5. give a name, (generally Main.fxml is given)
+6. Apply and save.
+
