@@ -1,0 +1,8 @@
+for every run , you need to run your python script
+
+
+>> python "mlflow_file_of_any_name.py"
+
+now you can do
+
+>> mlflow ui

@@ -10,6 +10,8 @@ To use current activated env without creating new one, you could do
 
 >> mlflow run . --no-conda
 
+FutureWarning: `--no-conda` is deprecated and will be removed in a future MLflow release. Use `--env-manager=local` instead.
+
 you can also provide parameters in command, parameters are prespecified in MLproject file
 
 >> mlflow run . -P alpha=0.7 -P l1=0.1 --no-conda
