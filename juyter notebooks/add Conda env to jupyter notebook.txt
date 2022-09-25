@@ -1,0 +1,25 @@
+Step 1: Create a Conda environment.
+
+>> conda create --name firstEnv
+
+Step 2: Activate the environment using the command as shown in the console. After you activate it.
+
+>> conda activate firstEnv
+
+Step 3: Now comes the step to set this conda environment on your jupyter notebook, to do so please install ipykernel.
+
+>> conda install -c anaconda ipykernel
+
+Step 4: After installing this.
+
+>> python -m ipykernel install --user --name=firstEnv
+
+Step 5: now start notebook in that directory
+
+>> jupyter notebook
+
+Step 6: To create new notebook with our conda env. Go to new button on left side.
+and select the env name from there. in our case, it would be firstEnv.
+
+Step 7: If you already have a notebook, to change kernel in it, just press kernel tab, and select change kernel.
+Select your environment name.
