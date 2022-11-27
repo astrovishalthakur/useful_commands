@@ -1,0 +1,28 @@
+Adding only patch to commit.
+
+command :
+
+>> git add -p <filename>
+
+for eg.
+
+suppose we have two files 1. index.html 2. styles.css
+
+we make some changes in index.html
+
+change 1. Add modifications related to css file
+change 2. Add other modifications not related to css file.
+
+Now rule in git says that we should only commit things which are of same topic.
+so, If we add css file to staging area, we only want to add change 1 of index file rather than whole index file.
+
+we can do that using -p or patch tag in add command.
+
+i.e.
+
+>> git add styles.ss
+>> git add -p index.html
+
+the second command above will not add whole index.html to staging area, rather it will take us all changes we did in file and ask us whether should we add that to staging area or not.
+
+We can add change 2 on a later date.
