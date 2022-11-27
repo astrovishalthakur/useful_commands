@@ -1,0 +1,5 @@
+suppose you merged two branches and a conflict occured, you can still abort that using
+
+>> git merge --abort
+
+Now you can always start clean and resolve conflicts youself.

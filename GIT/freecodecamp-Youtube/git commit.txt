@@ -1,0 +1,21 @@
+We know we do git commit like this
+
+>> git commit -m "some message"
+
+but sometimes, we need to add additional description of the commit
+
+so we can actually do 
+
+>> git commit
+
+now git will open a text editor, where we can write commit message.
+
+We can also add body or description if we leave one line after message and then type.
+
+e.g.
+
+TEXT EDITOR
+	
+	1. This is commit message
+	2.	-- empty line --
+	3. This is body or additional description.
