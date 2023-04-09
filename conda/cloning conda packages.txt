@@ -1,0 +1,62 @@
+Question: How do I create another conda env with tensorflow without downloading it again?
+
+
+
+ANSWER:
+
+To create another conda environment with TensorFlow without downloading it again, you can use the following steps:
+
+
+1. Open Anaconda prompt
+Type the following command: "conda create --name [new_env_name] --clone tensorflow_env"
+
+(Replace [new_env_name] with the desired name of your new environment)
+
+Press Enter
+
+Activate the new environment by typing: "conda activate [new_env_name]"
+
+(Replace [new_env_name] with the name of your new environment)
+
+Verify the installation by typing "python" to open the Python interpreter and then typing "import tensorflow as tf". If there are no errors, TensorFlow has been successfully installed in the new environment.
+
+Note: The new environment will contain a copy of all packages and dependencies from the tensorflow_env environment, including TensorFlow.
+
+
+#############################################################################
+#############################################################################
+#############################################################################
+#############################################################################
+#############################################################################
+#############################################################################
+
+
+
+QUESTION 2:   I have tensorflow in env1 and xgboost in env2, how do i create a new env3 such that tensorflow and xgboost are copied to env3 without downloading them from internet again?
+
+
+ANSWER:
+
+To create a new environment (env3) with TensorFlow from env1 and XGBoost from env2 without downloading them again, you can use the following steps:
+
+Open Anaconda prompt
+
+Activate env1 by typing "conda activate env1"
+
+Type the following command: "conda env export --no-builds -f env1_file.yml"
+
+This will create a YAML file "env1_file.yml" with a list of all packages and dependencies in env1, excluding any build dependencies.
+
+Activate env2 by typing "conda activate env2"
+
+Type the following command: "conda env export --no-builds -f env2_file.yml"
+
+This will create a YAML file "env2_file.yml" with a list of all packages and dependencies in env2, excluding any build dependencies.
+
+Create a new environment by typing "conda env create --name env3 -f env1_file.yml -f env2_file.yml"
+
+Activate the new environment by typing "conda activate env3"
+
+Note: The new environment (env3) will contain a copy of all packages and dependencies from env1 and env2, including TensorFlow and XGBoost. This process will not download the packages from the internet again if they are already installed in env1 and env2.
+
+
