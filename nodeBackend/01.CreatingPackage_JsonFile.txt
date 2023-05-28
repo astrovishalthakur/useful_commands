@@ -4,6 +4,8 @@ Do in folder where you want package.json to store.
 
 >> npm init
 
+(Make sure that your entry point java script file name matches the name of your javascript file where you will be requring node.)
+
 then change information if you want, or simply click enter if you are okay with default information.
 
 keep clicking enter 4-5 times, and it will create package.json for you.

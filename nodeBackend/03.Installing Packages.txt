@@ -1,0 +1,8 @@
+After you have done npm init in a directory, you will have a package.json file.
+
+you can then install various npm packages and they will be listed as dependencies in package.json with version numbers automatically.
+
+e.g. you have a package named "superheroes", you can install it like this.
+
+
+>> npm install superheroes
