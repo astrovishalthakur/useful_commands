@@ -1,0 +1,24 @@
+Express is a javascript library, or also a framework for node.
+
+Just like how we have flask in python, Express is same.
+
+Like flask, we create an Express Server here which listens on a specified port.
+
+Express is a npm package and we install it like
+
+>> npm install express
+
+now just like flask
+
+i.e   from flask import Flask	
+	const app = Flask()
+	app.run()
+
+We have express as 
+
+	const express = require('express')
+	cost app = express()
+	app.get("/", function(request, response){ response.send("<h1>Hello, World!</h1>"); });
+	app.listen(3000, () => { console.log('Server is up on port 3000'); });
+
+You can read more on express from docs or learning colt, webdev angela udemy.
