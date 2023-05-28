@@ -1,0 +1,9 @@
+After installing flutter, your first command should be
+This command dignosis flutter installations and tells us if flutter is ready to be used or not.
+
+>> flutter doctor
+
+
+To create a flutter project, go to projects folder
+
+>> flutter create <project_name>

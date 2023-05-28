@@ -1,0 +1,41 @@
+STEP 1:
+
+go to gradle properties, put distrubution url as 
+
+>> distributionUrl=https\://services.gradle.org/distributions/gradle-7.6.1-bin.zip
+
+STEP 2:
+
+go to build.gradle file, put classpath as 
+
+>> classpath 'com.android.tools.build:gradle:7.4.2'
+
+STEP 3:
+
+{
+press "ctrl + shift + p"
+
+click reload window.
+
+again press "ctrl + shift + p"
+
+start emulator
+
+run without debugging.
+}
+
+If it doesn't work, do following
+
+STEP 4:
+
+open terminal
+
+navigate to android folder in your flutter project, 
+run following command
+
+>> ./gradlew wrapper --gradle-version=7.6.1
+
+let it complete, 
+
+REPEAT STEP 3
+
