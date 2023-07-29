@@ -1,0 +1,19 @@
+When you create django project, it creates a directory of same name with bunch of files in it. Let's see what do these files do.
+
+1. __init__.py
+Tells python to treat it like a python package
+
+2. asgi.py and wsgi.py
+We don't need to modify these files.
+They are special configuration files and helps django deal with web server.
+
+3. settings.py
+Contains different settings.
+We will go there whenever we need to install andy django applications, plugins, middleware conf., as well as deal with different type of database engines. 
+
+4. urls.py
+Help configure different url routes which we can direct to our django applications.
+
+5. manage.py
+Acts as a command line tool and helps us to run command like make db migrations, run python servers, create users for django app.
+

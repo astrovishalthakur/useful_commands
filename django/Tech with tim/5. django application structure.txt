@@ -1,0 +1,23 @@
+Similar to demo folder, we will have some files here.
+
+lets discuss the here
+
+1. __init__.py
+It's same as previous.
+
+2. apps.py
+(later)
+
+3. models.py
+Here we place our database models.
+
+4. admin.py
+Helps register database models (later can be viewed on admin page.)
+
+5. tests.pyu
+Here we write some test cases.
+
+6. views.py
+This is where we will work mainly. Here we will create different routes and views that we can access on our website.
+
+

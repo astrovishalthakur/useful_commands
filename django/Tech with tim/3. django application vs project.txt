@@ -1,0 +1,65 @@
+When we created our django directory, it was django project. 
+
+django applications are different.
+
+++++++++++++++++
+DJANGO PROJECT
+++++++++++++++++
+
+Django project is the overall container for your web application. It is a collection of settings, configurations, and multiple Django applications that together form a complete web application. A project typically represents the entire website or web service you are building.
+
+In a Django project, you'll find settings that define various aspects of your application, such as database configuration, middleware, static files, templates, and more. A project can contain multiple Django applications, each serving a specific functionality or feature of the website.
+
+
+To create a new Django project, you can use the following command:
+
+
+>> django-admin startproject project_name
+
+After creating the project, its directory structure might look like this:
+
+project_name/
+├── manage.py
+└── project_name/
+    ├── __init__.py
+    ├── asgi.py
+    ├── settings.py
+    ├── urls.py
+    └── wsgi.py
+
+
+
+
+++++++++++++++++++++
+DJANGO APPLICATION
+++++++++++++++++++++
+
+A Django application is a modular component within a Django project that serves a specific functionality or set of related functionalities.
+
+===========
+(IMPORTANT)
+===========
+
+Applications are meant to be reusable and can be plugged into different projects, allowing you to keep your code organized and maintainable.
+
+For example, if you are building an e-commerce website, you might have separate applications for handling user authentication, product catalog, shopping cart, and payment processing. Each application focuses on a specific area of the website.
+
+
+To create a new Django application, you can use the following command within your project directory:
+
+
+>> python manage.py startapp app_name
+
+After creating an application, its directory structure might look like this:
+
+app_name/
+├── migrations/
+├── __init__.py
+├── admin.py
+├── apps.py
+├── models.py
+├── tests.py
+└── views.py
+
+Each application can have its models, views, templates, static files, and tests specific to its functionality.
+

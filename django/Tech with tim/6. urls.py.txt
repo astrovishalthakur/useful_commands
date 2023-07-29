@@ -1,0 +1,7 @@
+Just like we had urls.py in our project folder, we can also create new urls.py for each app.
+
+go to your project folder (myapp here)
+
+create new file called urls.py
+
+here we will create different routes that will be connected to different views.

@@ -1,0 +1,32 @@
+Right now you are in your django project directory i.e. demo.
+
+you will have there a file called manage.py and another directory called demo.
+
+This is where we will create our new app.
+
+Type command
+
+>> python manage.py startapp <application-name>
+
+
+Now you have created the app (let's say its name is myapp).
+
+Now you need to go tell django project about newly created app.
+
+1. You will go inside second demo directory.
+2. Go to settings.py
+3. look for INSTALLED_APPS list
+4. add there new item 
+5. this new item should be name of your app in strings.
+
+Suppose you app is called myapp, then INSTALLED_APPS should look like 
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'myapp'
+]

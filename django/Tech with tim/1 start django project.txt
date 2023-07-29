@@ -1,0 +1,4 @@
+>> django-admin startproject demo
+
+This creates a djanog project named "demo"(any name of you choice)
+It contains bunch of files and folders.
