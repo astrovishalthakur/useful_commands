@@ -7,7 +7,14 @@ a folder of your given name will be created in project folder.
 to activate it. go to your <venv1, etc> folder
 then go to Scripts folder
 type activate.
-(if using bash, type "source activate"
 this will activate the venv.
 to deactivate it, 
 type deactivate.
+
+
+---UPDATE WAY (For VSCODE on Windows)---
+
+go to terminal
+
+>> python -m venv <env-name>
+>> source <env-name>/bin/activate
