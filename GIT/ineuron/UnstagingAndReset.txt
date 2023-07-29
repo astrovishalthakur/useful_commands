@@ -34,6 +34,10 @@ If you have added you modified file to staging area, we need to unstage it
 
 command for unstaging a file is 
 
+>> git rm --cached <file-name>
+
+reset command can be littel dangerous sometimes. so only use above one.
+
 >> git reset HEAD <file-name>
 
 To unstage all files use .
