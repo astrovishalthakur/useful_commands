@@ -5,3 +5,36 @@ go to your project folder (myapp here)
 create new file called urls.py
 
 here we will create different routes that will be connected to different views.
+
+You will create you views in views file, checkout that in views file of your 'myapp' application.
+
+
+You have one urls.py file for entire project, and then separate urls.py for each application.
+
+'urls.py' in project will route you to different apps(like myapp, etc.). 
+and 'urls.py' in myapp(or other application) will route you to different views (like home, contact, etc.).
+
+
+so suppose you go to link "www.demo.com/myapp/home"
+
+in above url, "www.demo.com" will take you to project website.
+
+"www.demo.com/myapp" will take you to 'myapp' application using 'urls.py' in project folder (demo)
+
+and now any thing after this link, like "www.demo.com/myapp/home" will be handled by 'urls.py' file of application (myapp's urls.py).
+
+so request goes like this
+
+
+server -> project's urls.py -> applications' urls.py -> response
+
+or in our case
+
+(demo's server[website]) -> (demos/urls.py) [contains base urls of all apps] -> (myapp/urls.py) [contains urls of all views in myapp] -> (httpResponse) [from home function/view in views.py file].
+
+
+urls.py contains list of all urls, known as urlpatterns.
+
+each url in demo's urlpatterns should be connected to an app, or admin(by default)
+
+each url in myapp's urlpatterns should be connected with a view(a function defined in views.py).

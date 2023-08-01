@@ -1,0 +1,20 @@
+Templates are html files which can be used to make views display dynamic data (like webpages)
+
+first create "templates" folder inside our application.
+
+demo/myapp/templates
+
+make sure you only name this templates else it won't work.
+
+inside templates, we can create html pages.
+
+we can use jinja templating language which allows us to display dynamic data.
+
+suppose you create a home.html page inside templates, now you can go to your views.py file, and attach it to home function as 
+
+def home(request):
+    return render(request, "home.html")
+
+where render is function from django.shortcuts.
+
+Now whenever we go to /home route, home() function from views.py will run and it will return home.html from templates.

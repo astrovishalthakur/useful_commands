@@ -1,0 +1,31 @@
+so any time you make a change to your database models, you need to somehow update it manually. This is called making migrations.
+
+migrations are also automatic code which django will apply to change your models and update them while maintaining original data.
+
+You do that by typing following command
+
+>> python manage.py makemigrations
+
+You have to run this command every single time you make some changes to any of your database models.
+
+It will give output like this
+
+Migrations for 'myapp':
+  myapp/migrations/0001_initial.py
+    - Create model TodoItems
+
+
+after that we will type command
+
+>> python manage.py migrate
+
+above command will finally apply migrations and update the database for us.
+
+Now we will run again our server using command 
+
+>> python manage.py runserver
+
+and it will not give us any error that it gave previously.
+
+
+

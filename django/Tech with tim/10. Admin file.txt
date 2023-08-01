@@ -1,0 +1,20 @@
+Admin is where you register your app's data model.
+
+You go to admin.py of your app and register your model there.
+
+
+suppose, you created a model with class named TodoItem
+
+then in admin.py, you can write following code to register your model.
+
+
+```
+from django.contrib import admin 
+#
+# above line is there by default
+#
+
+from .models import TodoItem
+
+# Register your models here.
+admin.site.register(TodoItem)

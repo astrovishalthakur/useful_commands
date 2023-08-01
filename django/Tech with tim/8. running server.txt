@@ -1,0 +1,14 @@
+to run your django project locally, you can do following
+
+cd to your project directory (via terminal) i.e. demo in our case.
+
+there you will see manage.py and myapp/ directory.
+
+now in terminal, type following command
+
+>> python manage.py runserver
+
+
+your server will start serving you.
+
+It will run, but also give some warnings that migrations are not applied. We will apply them later.

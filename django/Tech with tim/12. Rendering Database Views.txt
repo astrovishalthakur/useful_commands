@@ -1,0 +1,12 @@
+Let's see how can we render database using views.
+
+Let's create a todos.html in templates directory.
+(here we will use jinja to display database items using a variable)
+
+Then we will create a todos function in views.py
+(here we can render todos.html file when todos() function is called. Here we will also pass that variable which jinja will display in todos.html
+
+After creating a todos view, we will create a url for it in urls.py list of urlpatterns.
+
+Then we can runserver and if we go to todos route (i.e. www.demo.com/todos/) we can see our items (if there are any)
+

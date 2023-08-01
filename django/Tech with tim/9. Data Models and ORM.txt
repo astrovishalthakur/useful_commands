@@ -1,0 +1,15 @@
+We create data models in models.py file of our application(myapp) that we can access from django.
+
+Django provides ORM (object relational mapping)
+
+meaning, we can write python code to create different database models, which will later automatically be converted to some structural database schema like SQL.
+
+ 
+Then we will make something known as migrations.
+These migrations automates the code to turn these models to databases like SQL, MongoDb, etc.
+
+
+We will go to models.py file of our app, and create a model there in form of python class
+
+
+After that we need to register that model in our apps admin.py file.
