@@ -1,1 +1,28 @@
-django admin panel is useful tool which helps us manage many 
+django admin panel is useful tool which helps us manage many things like users and models.
+
+
+to work with django admin panel, we need to create a user which will basically be an admin.
+
+let's see how we do that.
+
+go to terminal and type following command.
+
+
+>> python manage.py createsuperuser
+
+then it will ask for some details you can give it(email is optional).
+
+now you can runserver
+>> python manage.py runserver
+
+now if you go to route
+
+"<base-route>/admin"
+
+or say a local route
+
+"localhost:8000/admin"
+
+it will ask you to enter username and password. 
+
+when you login, it will display you a django admin dashboard where you are the boss. You can add new user, change data of existing users, create new admins, and many more functions.
