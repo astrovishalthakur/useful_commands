@@ -1,3 +1,6 @@
+Original Article = "https://towardsdatascience.com/a-guide-to-conda-environments-bc6180fc533"
+Article named = "The Definitive Guide to Conda Environments"
+
 So, how do you place environments outside of your Conda’s env/ folder? By using the --prefix flag instead of --name when creating an environment.
 
 % conda create --prefix /path/to/conda-env             # Or use -p
